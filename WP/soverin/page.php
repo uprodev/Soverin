@@ -1,19 +1,7 @@
 <?php 
 
-get_header(); 
+get_header();
 
-?>
-
-
-<?php the_post();
-
-	the_content();
-
-?>
-
-
-<?php 
+the_content();
 
 get_footer();
-
-?>

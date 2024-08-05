@@ -3,9 +3,7 @@
 include 'inc/enqueue.php';     // add styles and scripts
 include 'inc/acf.php';         // custom acf functions
 include 'inc/extras.php';      // custom functions
-include 'classes/walker.php';  // walker nav menu
-include 'inc/register.php';    // custom ajax register and auth
-include 'inc/ajax-actions.php';// ajax actions
+include 'inc/guttenberg.php';  // custom guttenberg blocks
 
 
 add_action('after_setup_theme', 'theme_register_nav_menu');
@@ -21,24 +19,25 @@ function theme_register_nav_menu(){
 }
 
 
+/* Custom Guttenberg Category Blocks  */
 
-if( function_exists('acf_add_options_page') ) {
-	
-	acf_add_options_page();
+add_filter( 'block_categories_all', 'custom_block_category' );
 
-	acf_add_options_sub_page('Theme Settings');
+function custom_block_category( $cats ) {
+
+    $new = array(
+        'literallyanything' => array(
+            'slug'  => 'custom_blocks',
+            'title' => 'Custom Blocks'
+        )
+    );
+
+    $position = 0;
+
+    $cats = array_slice( $cats, 0, $position, true ) + $new + array_slice( $cats, $position, null, true );
+
+    $cats = array_values( $cats );
+
+    return $cats;
+
 }
-
-
-
-function phone_clear($phone_num){ 
-    $phone_num = preg_replace("![^0-9]+!",'',$phone_num);
-    return($phone_num); 
-}				
-
-
-function my_acf_init() {
-	acf_update_setting('google_api_key', 'AIzaSyAh1NE8kfXzx31UyPrwTCqwJdETUseulmI');
-}
-
-add_action('acf/init', 'my_acf_init');
