@@ -41,3 +41,24 @@ function custom_block_category( $cats ) {
     return $cats;
 
 }
+
+function remove_query_strings_from_breadcrumbs($breadcrumb_trail) {
+
+    foreach ($breadcrumb_trail->breadcrumbs as $breadcrumb) {
+
+        $url = $breadcrumb->get_url();
+
+        $parsed_url = wp_parse_url($url);
+
+        if (isset($parsed_url['scheme']) && isset($parsed_url['host'])) {
+            $clean_url = $parsed_url['scheme'] . '://' . $parsed_url['host'] . $parsed_url['path'];
+        } else {
+            $clean_url = $parsed_url['path'];
+        }
+
+        $breadcrumb->set_url($clean_url);
+    }
+    return $breadcrumb_trail;
+}
+add_filter('bcn_after_fill', 'remove_query_strings_from_breadcrumbs');
+

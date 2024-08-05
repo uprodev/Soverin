@@ -35,7 +35,7 @@ get_template_part('templates/banner-page');
 
                             <h2><?= $icon?'<img src="'.$icon['url'].'" alt="'.$name.'">':'';?><?= $name;?></h2>
 
-                            <?= '<p>' . $description?$description . '</p>':'';?>
+                            <?= $description?'<p>' . $description . '</p>':'';?>
 
                         </div>
 
