@@ -1,15 +1,14 @@
 <?php
 
-$image = get_field('image');
-$title = get_field('title');
-$text = get_field('text');
+$image = get_field('image_help', 'options');
+$title = get_field('title_help', 'options');
+$text = get_field('text_help', 'options');
 
 ?>
 
 <section class="banner-help">
     <div class="content-width">
         <div class="content">
-
             <?php if($image):?>
                 <div class="bg">
                     <img src="<?= $image['url'];?>" alt="<?= $image['alt'];?>">
@@ -18,7 +17,7 @@ $text = get_field('text');
 
             <div class="wrap">
 
-                <?= $title?'<h1>'.$title.'</h1>':'<h1>'.get_the_title().'</h1>';?>
+                <?= $title?'<h1>'.$title.'</h1>':'';?>
 
                 <?= $text?$text:'';?>
 

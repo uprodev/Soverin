@@ -28,7 +28,7 @@ function help_register_blocks() {
         'title'         => 'Help Block',
         'render_template'   => 'templates/guttenberg/help_block.php',
         'category'      => 'custom_blocks',
-        'icon'          => 'dashicons-editor-help',
+        'icon'          => 'editor-help',
         'mode'          => 'edit',
         'keywords'      => array( 'profile', 'user', 'author' )
     ));

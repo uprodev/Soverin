@@ -1,6 +1,8 @@
 <?php
 
-
+$image = get_field('image');
+$title = get_field('title');
+$text = get_field('text');
 
 ?>
 
