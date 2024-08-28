@@ -1,0 +1,137 @@
+.item-3x{
+  padding: 60px 0 140px;
+  .h2{
+    color: $colorTitle;
+    margin-bottom: 67px;
+  }
+  .content{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+    grid-gap: 24px;
+  }
+  .item{
+    width: calc(33.33% - 16px);
+    border: 1px solid rgb(0, 191, 230);
+    border-radius: 16px;
+    background: rgb(255, 255, 255);
+    transition: all .4s ease;
+    &:hover{
+      background: $blue;
+      a{
+        h3{
+          color: #fff;
+        }
+        p{
+          color: #fff;
+        }
+      }
+    }
+    a{
+      display: block;
+
+      padding: 24px 35px 22px;
+      width: 100%;
+
+    }
+    .h3{
+      text-align: center;
+      transition: all .4s ease;
+      margin-bottom: 23px;
+      color: $red;
+    }
+    p{
+      transition: all .4s ease;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 120%;
+      letter-spacing: 0;
+    }
+  }
+  .btn-wrap{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.item-3x-red{
+  padding-top: 45px;
+  .item a{
+    padding: 24px 25px 22px;
+    p{
+      padding: 0 15px;
+    }
+  }
+  .item .h3{
+    color: $red;
+  }
+  .item:hover{
+    background: $red;
+    border-color: $red;
+    a{
+      h3{
+        color: $yellow;
+      }
+      p{
+        color: $yellow;
+      }
+    }
+  }
+}
+
+.item-3x-no-border{
+  .item .h3{
+    color: $blue!important;
+  }
+  .item{
+    background: transparent!important;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid transparent;
+    p{
+      color: $colorTitle!important;
+    }
+    &:hover{
+      border-bottom-color: $blue;
+    }
+  }
+}
+
+.item-3x.pb-80{
+  padding-bottom: 80px;
+}
+
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1280px) {
+  .item-3x-no-border .item a{
+    padding: 24px 5px 22px;
+  }
+}
+@media (max-width:1199px) {
+  .item-3x .item{
+    width: calc(50% - 12px);
+  }
+  .item-3x .content{
+    justify-content: center;
+  }
+}
+
+@media (max-width:991px) {
+
+}
+
+@media (max-width:767px) {
+  .item-3x .item{
+    width: 100%;
+  }
+}
+
+@media (max-width:575px) {
+  .item-3x .h2{
+    margin-bottom: 30px;
+  }
+}

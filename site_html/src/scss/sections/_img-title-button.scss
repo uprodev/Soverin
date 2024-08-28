@@ -1,0 +1,51 @@
+.img-title-button{
+  position: relative;
+  background: $yellow;
+  padding: 120px 0 120px;
+  .bg{
+    border-radius: 48px 48px 0px 0px;
+    background: $white;
+  }
+  .content{
+    max-width: 100%;
+    margin: auto;
+  }
+  figure{
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+  }
+  .title-up{
+    margin-bottom: 28px;
+  }
+  .btn-wrap{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+@media (max-width:1199px) {
+
+}
+
+@media (max-width:991px) {
+  .img-title-button{
+    padding: 60px 0 60px;
+  }
+}
+
+@media (max-width:767px) {
+
+}
+
+@media (max-width:575px) {
+
+}

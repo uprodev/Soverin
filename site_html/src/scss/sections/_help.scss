@@ -1,0 +1,241 @@
+.help{
+  padding: 100px 0 80px;
+  .content{
+    &:after {
+      content: "";
+      display: table;
+      clear: both;}
+  }
+  .help-menu{
+    float: left;
+    width: 280px;
+    ul{
+      li{
+        a{
+          display: flex;
+          align-items: center;
+          position: relative;
+          width: 100%;
+          height: 80px;
+          color: rgb(77, 31, 31);
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 120%;
+          &:after{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            content: '';
+            height: 2px;
+            background: rgb(0, 191, 230);
+            transition: all .4s ease;
+            transform: scaleX(0);
+            transform-origin: left;
+          }
+          img{
+            margin-right: 15px;
+          }
+          &:hover{
+            &:after{
+              transform: scaleX(1);
+            }
+          }
+        }
+      }
+      .current{
+        a{
+          color: rgb(255, 92, 77);
+          &:after{
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
+  .help-content{
+    width: calc(100% - 360px);
+    float: right;
+  }
+  h2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: rgb(77, 31, 31);
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 135%;
+    img{
+      margin-right: 10px;
+    }
+  }
+}
+
+.account{
+  padding-top: 5px;
+  .title{
+    margin-bottom: 34px;
+    p{
+      color: rgb(77, 31, 31);
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 120%;
+      letter-spacing: 2px;
+      text-align: left;
+      text-transform: uppercase;
+    }
+  }
+}
+.account-list{
+  border: 1px solid rgb(196, 245, 245);
+  border-radius: 8px;
+  box-shadow: 0px 1.5px 2px 0px rgba(16, 24, 40, 0.1);
+  background: rgb(255, 255, 255);
+  li:first-child{
+    a{
+      border-radius: 8px 8px 0 0;
+    }
+  }
+  li:last-child{
+    a{
+      border-radius: 0 0 8px 8px;
+      border-bottom: 0;
+    }
+  }
+  a{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(196, 245, 245);
+    padding: 5px 20px;
+    min-height: 80px;
+    color: rgb(77, 31, 31);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: .5px;
+    text-align: left;
+    text-transform: uppercase;
+    &:hover{
+      background:  rgb(77, 31, 31);
+      color: #fff;
+    }
+  }
+}
+
+.help .default-text{
+  margin-top: -17px;
+  p{
+    color: rgb(77, 31, 31);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 150%;
+    letter-spacing:1px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  ol{
+    color: rgb(77, 31, 31);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 150%;
+    letter-spacing:0.4px;
+    padding-left: 30px;
+    a{
+      color: rgb(77, 31, 31);
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 150%;
+      letter-spacing:0.4px;
+      position: relative;
+      &:after{
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 1px;
+        transition: all .4s ease;
+        transform-origin: left;
+        background: rgb(77, 31, 31);
+      }
+      &:hover{
+        &:after{
+          transform: scaleX(0);
+        }
+      }
+
+    }
+    text-align: left;
+    li{
+      margin-bottom: 0;
+    }
+    figure{
+      margin: 45px 0 50px -30px;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .help h2{
+    font-size: 44px;
+  }
+  .account-list a{
+    min-height: 70px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1280px) {
+
+}
+@media (max-width:1199px) {
+
+}
+
+@media (max-width:991px) {
+  .help .help-menu{
+    width: 150px;
+  }
+  .help .help-menu ul li a{
+    height: 50px;
+    font-size: 18px;
+  }
+  .help .help-content {
+    width: calc(100% - 180px);
+  }
+  .account-list a {
+    min-height: 50px;
+    font-size: 18px;
+  }
+  .help h2{
+    font-size: 30px;
+  }
+  .help{
+    padding: 40px 0;
+  }
+}
+
+@media (max-width:767px) {
+  .help .help-menu ul li a{
+    font-size: 0;
+  }
+  .help .help-menu{
+    width: 32px;
+  }
+  .help .help-menu ul li a img{
+    margin: 0;
+  }
+  .help .help-content {
+    width: calc(100% - 80px);
+  }
+}
+
+
+@media (max-width:575px) {
+  .banner-help p, .account .title p {
+    font-size: 18px;
+  }
+}

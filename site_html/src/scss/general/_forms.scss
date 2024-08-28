@@ -1,0 +1,66 @@
+.form-email{
+  width: 665px;
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .input-wrap{
+    width: 50%;
+    margin-bottom: 32px;
+    label{
+      display: none;
+    }
+    input{
+      width: 100%;
+      background: transparent;
+      border: none;
+      height: 70px;
+      line-height: 70px;
+      color: $colorTitle;
+      font-size: 20px;
+      font-weight: 400;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgb(0, 191, 230);
+      padding: 0 25px;
+    }
+  }
+  .input-wrap-submit{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    button{
+      min-width: 200px;
+    }
+  }
+  .text-left{
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+@media (max-width:1199px) {
+  .form-email .input-wrap input{
+    padding: 0 10px;
+  }
+}
+
+@media (max-width:991px) {
+
+}
+
+@media (max-width:767px) {
+
+}
+
+@media (max-width:575px) {
+  .form-email .input-wrap{
+    width: 100%;
+  }
+}

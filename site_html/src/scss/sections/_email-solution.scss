@@ -1,0 +1,236 @@
+.email-solution{
+  padding: 125px 0 72px;
+  position: relative;
+  margin-top: -40px;
+  figure{
+    display: none;
+  }
+  .bg{
+    background: #fff;
+    border-radius: 48px 48px 0px 0px;
+    img{
+      position: absolute;
+      top: 0;
+      right: 50%;
+      transform: translate(52%,0);
+    }
+  }
+  .text{
+    width: 50%;
+  }
+  .title{
+    margin-bottom: 72px;
+    p{
+      max-width: 98%;
+    }
+  }
+  .h2{
+    color: $colorTitle;
+    margin-bottom: 27px;
+    text-align: left;
+    line-height: 135%;
+  }
+  p{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 120%;
+    margin-bottom: 20px;
+    letter-spacing: 0.3px;
+    a{
+      color: $blue;
+      &:hover{
+        color: $red;
+      }
+    }
+  }
+  p:last-child{
+    margin-bottom: 0;
+  }
+  ol{
+    padding: 0;
+    li{
+      padding-left: 62px;
+      position: relative;
+      counter-increment: li;
+      list-style-type: none;
+      margin-bottom: 45px;
+      &:before{
+        content: "0" counter(li);
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $blue;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 140%;
+      }
+    }
+    li:last-child{
+      margin-bottom: 0;
+    }
+  }
+  h6{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 2px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  h5{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 120%;
+    margin-bottom: 10px;
+    font-family: $font;
+    letter-spacing: 0.5px;
+  }
+  h4{
+    font-family: $font;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $blue;
+    margin-bottom: 22px;
+  }
+}
+
+.email-solution-2{
+  .bg{
+    background: transparent;
+    img{
+      top: 89px;
+      right: 50%;
+      transform: translate(111%, 0);
+    }
+  }
+}
+
+.email-solution-3{
+  padding-bottom: 90px;
+  .bg{
+    background: transparent;
+    top: -40px;
+    img{
+      top: 0;
+      right: 50%;
+      transform: translate(99%, 0);
+    }
+  }
+  .h2{
+    color: $red;
+  }
+}
+
+.email-solution-4{
+  margin-bottom: 72px;
+  .bg{
+    img{
+      top: 120px;
+      right: 50%;
+      transform: translate(115%, 0);
+    }
+  }
+}
+
+.email-solution-5{
+  padding-bottom: 65px;
+  .bg{
+    background: transparent;
+    img{
+      top: 120px;
+      right: 50%;
+      transform: translate(105%, 0);
+    }
+  }
+  .text{
+    width: 45%;
+  }
+}
+.email-solution-6{
+  padding-top: 152px;
+  .bg{
+    background: transparent;
+    img{
+      top: 168px;
+      right: 50%;
+      transform: translate(121%, 0);
+    }
+  }
+  .h2{
+    margin-bottom: 10px;
+  }
+}
+
+.email-solution-7{
+  position: relative;
+  z-index: 5;
+  .h2{
+    min-width: 790px;
+    margin-bottom: 10px;
+  }
+  .bg{
+    img{
+      transform: translate(66%, 0);
+    }
+  }
+}
+
+
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+@media (max-width:1199px) {
+  .email-solution .bg img{
+    display: none;
+  }
+  .email-solution .text{
+    width: 100%;
+  }
+  .email-solution figure{
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    img{
+      width: 200px;
+      height: auto;
+    }
+  }
+  .email-solution{
+    padding: 70px 0 70px;
+  }
+  .email-solution .h2 br{
+    display: none;
+  }
+}
+
+@media (max-width:991px) {
+
+}
+
+@media (max-width:767px) {
+  .email-solution h6, .email-solution h4{
+    font-size: 20px;
+  }
+}
+
+@media (max-width:575px) {
+  .email-solution{
+    padding-bottom: 30px;
+  }
+  .email-solution .title{
+    margin-bottom: 20px;
+  }
+  .email-solution-4{
+    margin-bottom: 0;
+  }
+}

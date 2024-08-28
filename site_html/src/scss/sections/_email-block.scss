@@ -1,0 +1,40 @@
+.email-block{
+  padding: 82px 0 80px;
+  background: linear-gradient(180.00deg, rgb(251, 252, 249),rgb(255, 232, 140) 100%);
+  .content{
+    max-width: 100%;
+    width: 875px;
+    margin: auto;
+  }
+  .title-big{
+    padding: 0 5%;
+    margin-bottom: 48px;
+  }
+  .text-up{
+    margin-bottom: 31px;
+  }
+}
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+@media (max-width:1199px) {
+  .email-block .title-big{
+    padding: 0;
+  }
+}
+
+@media (max-width:991px) {
+
+}
+
+@media (max-width:767px) {
+
+}
+
+@media (max-width:575px) {
+
+}
