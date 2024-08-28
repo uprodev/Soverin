@@ -1,0 +1,30 @@
+
+
+
+{{ flexible }}
+    {{ partial src="sets/{type}" }}
+{{ /flexible }}
+
+
+{{ flexible }}
+
+{{ if type == "hero" }}
+
+
+
+{{ elseif type == "cta" }}
+
+<blockquote>{{ text }}</blockquote>
+
+
+{{ elseif type == "image" }}
+
+<figure>
+    <img src="{{ photo }}" alt="{{ caption }}" />
+    <figcaption>{{ caption }}</figcaption>
+</figure>
+
+{{ /if }}
+
+{{ /flexible }}
+

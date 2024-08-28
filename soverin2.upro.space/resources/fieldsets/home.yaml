@@ -1,0 +1,45 @@
+title: Home
+fields:
+  -
+    handle: flexible
+    field:
+      type: replicator
+      display: Content
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            hero:
+              display: Hero
+              icon: align-object-top
+              fields:
+                -
+                  handle: image
+                  field:
+                    container: assets
+                    type: assets
+                    display: Image
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: subtitle
+                  field:
+                    type: text
+                    display: Subtitle
+                -
+                  handle: button
+                  field:
+                    type: link
+                    display: Button
+            cta:
+              display: CTA
+              icon: alert-alarm-bell
+              fields:
+                -
+                  handle: text
+                  field:
+                    type: markdown
+                    display: Text

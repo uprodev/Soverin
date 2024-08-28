@@ -1,0 +1,19 @@
+<div class="help-menu">
+
+
+    <ul>
+        {{ current_tax = slug }}
+
+        {{ taxonomy:category_help }}
+        <li class="{{ current_tax === slug ||  category_help:0:slug === slug ? 'current' : '' }}"><a   href="{{ url }}">
+            {{ img }}
+            <img src="{{ url }}" alt="{{ alt }}" />
+            {{ /img }}
+            {{ title }}</a>
+        </li>
+
+
+        {{ /taxonomy:category_help }}
+
+    </ul>
+</div>
