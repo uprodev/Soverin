@@ -36,6 +36,31 @@
   .text-left{
     justify-content: flex-start;
   }
+
+  .input-wrap + .input-wrap{
+    position: relative;
+    &:before{
+      position: absolute;
+      top: 24px;
+      left: 0px;
+      content: '@';
+      color: rgb(77, 31, 31);
+      font-size: 20px;
+      line-height: 1;
+    }
+  }
+  input::-webkit-input-placeholder {
+    color: rgb(77, 31, 31);
+  }
+  input::-moz-placeholder {
+    color: rgb(77, 31, 31);
+  }
+  input:-ms-input-placeholder {
+    color: rgb(77, 31, 31);
+  }
+  input:-moz-placeholder {
+    color: rgb(77, 31, 31);
+  }
 }
 
 @media (max-width: 1440px) {
@@ -48,6 +73,9 @@
 @media (max-width:1199px) {
   .form-email .input-wrap input{
     padding: 0 10px;
+  }
+  .form-email .input-wrap + .input-wrap:before{
+    left: -10px;
   }
 }
 
@@ -62,5 +90,13 @@
 @media (max-width:575px) {
   .form-email .input-wrap{
     width: 100%;
+  }
+  .form-email .input-wrap + .input-wrap:before{
+    left: 5px;
+  }
+  .form-email .input-wrap + .input-wrap{
+    input{
+      padding-left: 25px;
+    }
   }
 }
