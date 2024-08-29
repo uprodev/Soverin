@@ -1,0 +1,13 @@
+title: 'Category help'
+fields:
+  -
+    handle: icon_field
+    field:
+      type: icon
+      display: 'Icon Field'
+  -
+    handle: img
+    field:
+      container: assets
+      type: assets
+      display: Image

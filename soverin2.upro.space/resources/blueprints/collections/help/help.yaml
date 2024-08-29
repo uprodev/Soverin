@@ -1,0 +1,71 @@
+title: Help
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              localizable: true
+          -
+            handle: author
+            field:
+              type: users
+              display: Author
+              default: current
+              localizable: true
+              max_items: 1
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+      -
+        display: 'New Section'
+        fields:
+          -
+            handle: bard_field
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: 'Bard Field'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: category_help
+            field:
+              type: terms
+              taxonomies:
+                - category_help
+              display: 'Category help'
+              mode: select
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - help
+              max_items: 1
+              listable: false
+              localizable: true

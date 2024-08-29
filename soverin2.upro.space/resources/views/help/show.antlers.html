@@ -1,0 +1,35 @@
+{{ partial:help/banner }}
+
+<section class="help">
+    <div class="content-width">
+        <div class="content">
+            {{ partial:help/nav }}
+
+            <div class="help-content">
+                <div class="account">
+                    <div class="title">
+                        <ul class="breadcrumb">
+                            {{ nav:breadcrumbs }}
+                            <li{{ if is_current }} class="current"{{ /if }}>
+                                <a href="{{ url }}">{{ title }}</a>
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                            </li>
+                            {{ /nav:breadcrumbs }}
+                        </ul>
+
+                        <h2>{{ title }}</h2>
+
+                    </div>
+                    <div class="default-text">
+                        {{ content }}
+                        
+                        <div class="btn-wrap">
+                            <a href="https://soverin.upro.space/category_help/account/" class="btn-default">Go back</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
