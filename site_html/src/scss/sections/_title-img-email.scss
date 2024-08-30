@@ -42,9 +42,10 @@
 
 @media (max-width: 1440px) {
   .title-img-email .bg img{
-    width: 400px;
+    max-width: 400px;
     top: -100px;
     transform: translate(150%, 0);
+    max-height: 300px;
   }
 }
 
@@ -53,10 +54,11 @@
 }
 @media (max-width:1199px) {
   .title-img-email .bg img {
-    width: 300px;
+    max-width: 300px;
     top: -50px;
     transform: none;
     right: 0;
+    max-height: 200px;
   }
   .title-img-email {
     position: relative;
@@ -66,13 +68,15 @@
 
 @media (max-width:991px) {
   .title-img-email .bg img{
-    width: 200px;
+    max-width: 200px;
+    max-height: 150px;
   }
 }
 
 @media (max-width:767px) {
   .title-img-email .bg img{
-    right: calc(50% - 100px);
+    right: 50%;
+    transform: translate(50%,0);
     top: 30px;
   }
 }
