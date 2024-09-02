@@ -216,7 +216,23 @@
     margin-bottom: 8px;
   }
 }
-
+.email-solution-10{
+  background: transparent;
+  margin-top: 0;
+  padding-bottom: 18px;
+  .text{
+    width: 54%;
+  }
+  .bg{
+    background: transparent;
+    img{
+      transform: translate(55.5%, 0);
+    }
+  }
+  ol li{
+    margin-bottom: 56px;
+  }
+}
 
 @media (max-width: 1440px) {
 
@@ -271,5 +287,8 @@
   }
   .email-solution-4{
     margin-bottom: 0;
+  }
+  .email-solution ol li{
+    margin-bottom: 20px;
   }
 }

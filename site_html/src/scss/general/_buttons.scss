@@ -79,3 +79,9 @@ section{
 .bg-blue{
   background: $lightBlue;
 }
+
+@media (max-width: 575px){
+  .btn-default{
+    font-size: 18px;
+  }
+}

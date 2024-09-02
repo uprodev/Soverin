@@ -75,6 +75,16 @@
     color: $colorTitle;
   }
 }
+
+.bg-section-blue.home-banner h1{
+  color: $colorTitle;
+}
+.home-banner.pb-245{
+  padding-bottom: 245px;
+  .scroll{
+    bottom: 106px;
+  }
+}
 @media (max-width: 1440px) {
   .home-banner h1{
     font-size: 80px;

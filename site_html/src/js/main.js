@@ -106,6 +106,7 @@ $(document).ready(function () {
     e.preventDefault();
     let item = $(this),
         itemIndex = item.index() + 1;
+    console.log( itemIndex)
 
     $('.tabs-menu li').removeClass('is-active');
     $(item).addClass('is-active')
@@ -156,4 +157,15 @@ $(document).ready(function () {
       item.slideUp();
     }
   });
+
+  // +/-
+  $(".btn-count-plus").click(function () {
+    var e = $(this).parent().find("input");
+    return e.val(parseInt(e.val()) + 1), e.change(), !1
+  }), $(".btn-count-minus").click(function () {
+    var e = $(this).parent().find("input"), t = parseInt(e.val()) - 1;
+    return t = t < 1 ? 1 : t, e.val(t), e.change(), !1
+  })
+
+
 });
