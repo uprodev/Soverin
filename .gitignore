@@ -1,0 +1,58 @@
+# Laravel related files
+/WP/
+/html/
+/site_html/
+/vendor/
+/node_modules/
+.env
+/.env.example
+/.phpunit.result.cache
+/storage/*.key
+/public/hot
+/public/storage
+/public/mix-manifest.json
+/mix-manifest.json
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+/vite.config.js
+/webpack.mix.js
+
+# Statamic specific files and folders
+/local/*
+/site/assets/*
+/storage/statamic
+/storage/framework/cache/*
+
+# Ignoring user uploaded content
+/site/content/assets/*
+/site/content/collections/*
+/site/content/forms/*
+/site/content/globals/*
+/site/content/navigation/*
+/site/content/taxonomies/*
+/site/content/users/*
+/storage/app/assets/*
+/storage/app/users/*
+
+# Ignoring cache, logs, and temporary files
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/testing/*
+/storage/framework/views/*
+/storage/logs/*
+/bootstrap/cache/*
+
+# Ignoring temporary and compiled files
+*.log
+*.cache
+*.phpunit.result.cache
+*.env
+
+# Ignoring IDE-specific files
+.idea/
+/*.iml
+/.vscode/
+
+# Ignoring deployment specific files
+/deploy/*
