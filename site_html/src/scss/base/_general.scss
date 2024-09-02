@@ -134,6 +134,11 @@ input, textarea, button{
   margin-top: -35px;
 }
 
+.z-10{
+  position: relative;
+  z-index: 10;
+}
+
 @media (max-width: 1440px) {
   .content-width {
     width: 1200px;

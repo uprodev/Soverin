@@ -180,6 +180,43 @@
   }
 }
 
+.email-solution-8{
+  margin-top: -24px;
+  padding-top: 121px;
+
+  border-radius: 48px 48px 0 0;
+  .bg{
+    background: transparent;
+    img{
+      top: 118px;
+      right: 50%;
+      transform: translate(118%, 0);
+    }
+  }
+  .h2{
+    color: $red;
+    margin-bottom: 23px;
+  }
+}
+
+.email-solution-9{
+  margin-top: -24px;
+  padding-top: 121px;
+
+  border-radius: 48px 48px 0 0;
+  .bg{
+    background: transparent;
+    img{
+      top: 165px;
+      right: 50%;
+      transform: translate(114%, 0);
+    }
+  }
+  .h2{
+    margin-bottom: 8px;
+  }
+}
+
 
 @media (max-width: 1440px) {
 
@@ -214,7 +251,9 @@
 }
 
 @media (max-width:991px) {
-
+  .email-solution-7 .h2{
+    min-width: 100%;
+  }
 }
 
 @media (max-width:767px) {

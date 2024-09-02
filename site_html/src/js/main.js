@@ -62,6 +62,10 @@ $(document).ready(function () {
       nextEl: ".next-people",
       prevEl: ".prev-people",
     },
+    pagination: {
+      el: ".people-pagination",
+      type: "progressbar",
+    },
   });
 
   var swiperInfo = new Swiper(".info-slider", {
