@@ -1,0 +1,45 @@
+<section class="email-block">
+  <div class="content-width">
+    <div class="content"><h2 class="title-big">{{ title }}</h2>
+      <h6 class="text-up">{{ subtitle }}</h6>
+
+
+
+      {{ form:cta_form id="formCta"  class="form-email" }}
+        {{ if success }}
+          <div class="bg-green-300 text-white p-2">
+            {{ success }}
+          </div>
+        {{ else }}
+
+          {{ if errors }}
+            <div class="bg-red-300 text-white p-2">
+              {{ errors }}
+              {{ value }}<br>
+              {{ /errors }}
+            </div>
+          {{ /if }}
+
+
+          {{ fields }}
+          <div class="input-wrap">
+            <label for="{{  handle }}"></label>
+            {{ field }}
+          </div>
+          {{ /fields }}
+
+          <div class="input-wrap-submit">
+            <button type="submit" class="btn-default bg-blue">Claim it</button>
+          </div>
+
+        {{ /if }}
+
+      {{ /form:cta_form }}
+
+
+
+
+    </div>
+  </div>
+</section>
+

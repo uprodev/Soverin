@@ -1,50 +1,48 @@
 <header>
-    <div class="top-line">
-        <div class="content-width">
-            <div class="logo-wrap">
-                <a href="/">
+  <div class="top-line">
+    <div class="content-width">
+      <div class="logo-wrap">
+        <a href="/">
+          <img src="{{ options:logo:0:url }}" alt="{{ alt }}">
+        </a>
+      </div>
 
+      <nav class="top-menu-wrap">
+        <ul class="top-menu">
+          {{ nav handle="main" }}
+            <li>
+              <a href="{{ url }}" >{{ title }}
+                {{ if children }}
+                  <i class="fa-solid fa-chevron-down"></i>
+                {{ /if }}
+              </a>
 
-                    <img src="{{ options:logo:0:url }}" alt="{{ alt }}">
+              {{ if children }}
+                <ul class="sub-menu">
+                  {{ children }}
+                  <li>
 
-
-                </a>
-            </div>
-
-            <ul>
-                {{ nav handle="main" }}
-                <li>
-                    <a href="{{ url }}" >{{ title }}</a>
-
-                        {{ if children }}
-                            <ul>{{ *recursive children* }}</ul>
-                        {{ /if }}
-
-                </li>
-                {{ /nav }}
-            </ul>
-
-
-
-            <nav class="top-menu-wrap">
-                <ul class="top-menu">
-                    <li><a href="#">Solutions<i class="fa-solid fa-chevron-down"></i></a></li>
-                    <li><a href="#">About<i class="fa-solid fa-chevron-down"></i></a></li>
-                    <li><a href="#">Resources<i class="fa-solid fa-chevron-down"></i></a></li>
-                    <li><a href="#">Product<i class="fa-solid fa-chevron-down"></i></a></li>
-                </ul>
-                <ul class="btn-list">
-                    <li><a href="#" class="link">Sign in</a></li>
-                    <li><a href="#" class="btn-border"><span>Try now</span></a></li>
-                </ul>
-                <div class="open-menu">
-                    <a href="#">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                    <a href="{{ url }}">
+                      {{ if bold }} <b> {{ /if }}
+                      {{ title }}
+                      {{ if bold }} </b> {{ /if }}
                     </a>
-                </div>
-            </nav>
-        </div>
+
+                  </li>
+                  {{ /children }}
+                </ul>
+              {{ /if }}
+
+            </li>
+          {{ /nav }}
+
+        </ul>
+        <ul class="btn-list">
+          <li><a href="#" class="link">Sign in</a></li>
+          <li><a href="#" class="btn-border"><span>Try now</span></a></li>
+        </ul>
+        <div class="open-menu"><a href="#"><span></span> <span></span> <span></span></a></div>
+      </nav>
     </div>
+  </div>
 </header>
