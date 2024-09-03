@@ -1,0 +1,37 @@
+<section class="title-grid-2">
+  <div class="content-width">
+    <div class="title-wrap">
+      <div class="title">
+        <h2 class="h2 black">{{ title }}</h2>
+        <p>
+          {{ text }}
+        </p>
+        {{  if link }}
+        <div class="btn-wrap">
+          <a href="{{ link:link }}" class="btn-border">
+            <span>{{ link:title }}</span></a>
+        </div>
+        {{  /if }}
+      </div>
+      <div class="img-wrap"><img src="{{ image:url}}" alt=""></div>
+    </div>
+    <div class="content">
+
+      {{  features }}
+
+      <div class="item item-{{  index+1 }}">
+        <a href="{{ link }}">
+          <figure> <img src="{{ image:url }}" alt=""></figure>
+          <div class="text-wrap">
+            <div class="text-title"><h3 class="h3">{{ title }}</h3></div>
+            <div class="text"><p>{{ text }}</p></div>
+          </div>
+        </a>
+      </div>
+
+
+      {{  /features }}
+
+    </div>
+  </div>
+</section>

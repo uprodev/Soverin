@@ -1,0 +1,30 @@
+tree:
+  -
+    id: 5d240760-c4a0-4a75-8c27-7da35d497659
+    entry: home
+  -
+    id: ef20a804-57ed-47fb-a7da-3fb2c589ae69
+    title: Solutions
+    url: '#'
+    children:
+      -
+        id: 953ba867-77b5-4e27-bc5f-d3f4cacf82e4
+        title: 'For business'
+        url: '#'
+        data:
+          bold: true
+      -
+        id: 909fd355-1205-48a5-bcde-5cb0e5375d04
+        entry: 9a263b45-bccf-430b-8e18-5db2332508b0
+  -
+    id: 2b116aef-52de-4b8f-91bc-fc5e05dc9bf0
+    title: 'About us'
+    url: '#'
+    children:
+      -
+        id: c6c4c403-9047-465f-8b19-0c940ec6329d
+        entry: 190bf458-f7d5-40dc-9f11-5cccebaa2f45
+  -
+    id: dfd8979d-8080-4f07-91d2-1150288fdaec
+    title: Resourses
+    url: '#'

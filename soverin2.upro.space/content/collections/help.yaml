@@ -1,0 +1,19 @@
+title: Help
+template: help/show
+layout: layout
+taxonomies:
+  - category_help
+revisions: false
+route: '/help/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true
+structure:
+  root: false
+  slugs: true

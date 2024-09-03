@@ -1,0 +1,11 @@
+title: 'Category help'
+preview_targets:
+  -
+    label: Term
+    url: '{permalink}'
+    refresh: true
+term_template: help/index
+layout: layout
+sites:
+  - default
+  - nederlands

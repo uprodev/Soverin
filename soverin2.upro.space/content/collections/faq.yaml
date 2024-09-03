@@ -1,0 +1,7 @@
+title: FAQ
+taxonomies:
+  - category_faq
+revisions: false
+date_behavior:
+  past: public
+  future: private
