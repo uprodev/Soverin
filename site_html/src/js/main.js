@@ -10,6 +10,7 @@ import "../../plugins/fancybox/jquery.fancybox.min";
 import "../../plugins/fixto/fixto.min.js";
 
 import Swiper from "swiper/bundle";
+import Dot from "dotdotdot-js/dist/dotdotdot";
 import "jquery.marquee/jquery.marquee.min.js";
 
 
@@ -26,7 +27,14 @@ $(document).ready(function () {
 
   //fix-block
   $('.help-menu').fixTo('.help .content', {
-    top: 100,
+    top: 50,
+    useNativeSticky:true
+  });
+
+
+  //fix-block
+  $('.article .left').fixTo('.article .content', {
+    top: 50,
     useNativeSticky:true
   });
 
@@ -64,6 +72,20 @@ $(document).ready(function () {
     },
     pagination: {
       el: ".people-pagination",
+      type: "progressbar",
+    },
+  });
+
+  //slider
+  var swiperPeople2 = new Swiper(".slider-people-2", {
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".next-people-2",
+      prevEl: ".prev-people-2",
+    },
+    pagination: {
+      el: ".people-pagination-2",
       type: "progressbar",
     },
   });
@@ -167,5 +189,50 @@ $(document).ready(function () {
     return t = t < 1 ? 1 : t, e.val(t), e.change(), !1
   })
 
+  $('.blog .item p').dotdotdot({
+    height: 50
+  });
+
+
+  //onePageNav
+  if($('.article').length){
+    $('a[href^="#"]').click(function() {
+      $('html,body').animate({ scrollTop: $($(this).attr('href')).offset().top -60 }, 'slow','swing');
+      return false;
+    });
+  }
+
+  function onePageNav( switchName ) {
+    const navSwitch = $(switchName);
+    const deductHeight = 60;
+    let navArr = [];
+
+
+    navSwitch.each(function(i){
+      let navSwitchHref = $(this).attr('href');
+      let tgtOff = $(navSwitchHref).offset().top - deductHeight;
+      navArr.push([]);
+      navArr[i].switch = $(this);
+      navArr[i].tgtOff = tgtOff;
+    });
+//        console.log(navArr);
+    $(window).scroll(function () {
+      for( let i = 0; i < navArr.length; i++ ){
+        let scroll = $(window).scrollTop();
+        let tgtKey = navArr[i];
+        let tgtSwitch = tgtKey.switch;
+        let tgtOff = tgtKey.tgtOff;
+        if ( scroll >= tgtOff ) {
+          navSwitch.removeClass('is-current');
+          tgtSwitch.addClass('is-current');
+        } else {
+          tgtSwitch.removeClass('is-current');
+        }
+      }
+    });
+  }
+  $(window).on('load resize',function(){
+    onePageNav('.js-curnav-switch');
+  });
 
 });

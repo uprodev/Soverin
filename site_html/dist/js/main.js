@@ -10793,17 +10793,6 @@ var fixto=function(e,t,n){function s(){this._vendor=null}function f(){var e=!1,t
     Made by Hernán Sartorio  */
 !function(e){e.fn.niceSelect=function(t){function s(t){t.after(e("<div></div>").addClass("nice-select").addClass(t.attr("class")||"").addClass(t.attr("disabled")?"disabled":"").attr("tabindex",t.attr("disabled")?null:"0").html('<span class="current"></span><ul class="list"></ul>'));var s=t.next(),n=t.find("option"),i=t.find("option:selected");s.find(".current").html(i.data("display")||i.text()),n.each(function(t){var n=e(this),i=n.data("display");s.find("ul").append(e("<li></li>").attr("data-value",n.val()).attr("data-display",i||null).addClass("option"+(n.is(":selected")?" selected":"")+(n.is(":disabled")?" disabled":"")).html(n.text()))})}if("string"==typeof t)return"update"==t?this.each(function(){var t=e(this),n=e(this).next(".nice-select"),i=n.hasClass("open");n.length&&(n.remove(),s(t),i&&t.next().trigger("click"))}):"destroy"==t?(this.each(function(){var t=e(this),s=e(this).next(".nice-select");s.length&&(s.remove(),t.css("display",""))}),0==e(".nice-select").length&&e(document).off(".nice_select")):console.log('Method "'+t+'" does not exist.'),this;this.hide(),this.each(function(){var t=e(this);t.next().hasClass("nice-select")||s(t)}),e(document).off(".nice_select"),e(document).on("click.nice_select",".nice-select",function(t){var s=e(this);e(".nice-select").not(s).removeClass("open"),s.toggleClass("open"),s.hasClass("open")?(s.find(".option"),s.find(".focus").removeClass("focus"),s.find(".selected").addClass("focus")):s.focus()}),e(document).on("click.nice_select",function(t){0===e(t.target).closest(".nice-select").length&&e(".nice-select").removeClass("open").find(".option")}),e(document).on("click.nice_select",".nice-select .option:not(.disabled)",function(t){var s=e(this),n=s.closest(".nice-select");n.find(".selected").removeClass("selected"),s.addClass("selected");var i=s.data("display")||s.text();n.find(".current").text(i),n.prev("select").val(s.data("value")).trigger("change")}),e(document).on("keydown.nice_select",".nice-select",function(t){var s=e(this),n=e(s.find(".focus")||s.find(".list .option.selected"));if(32==t.keyCode||13==t.keyCode)return s.hasClass("open")?n.trigger("click"):s.trigger("click"),!1;if(40==t.keyCode){if(s.hasClass("open")){var i=n.nextAll(".option:not(.disabled)").first();i.length>0&&(s.find(".focus").removeClass("focus"),i.addClass("focus"))}else s.trigger("click");return!1}if(38==t.keyCode){if(s.hasClass("open")){var l=n.prevAll(".option:not(.disabled)").first();l.length>0&&(s.find(".focus").removeClass("focus"),l.addClass("focus"))}else s.trigger("click");return!1}if(27==t.keyCode)s.hasClass("open")&&s.trigger("click");else if(9==t.keyCode&&s.hasClass("open"))return!1});var n=document.createElement("a").style;return n.cssText="pointer-events:auto","auto"!==n.pointerEvents&&e("html").addClass("no-csspointerevents"),this}}(jQuery);
 
-/***/ }),
-
-/***/ 269:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-/* provided dependency */ var jQuery = __webpack_require__(755);
-/**
- * Created by kvv on 22.03.2018.
- */
-!function(a,b,c){var e=function(d,e){this.elem=d,this.$elem=a(d),this.options=e,this.metadata=this.$elem.data("plugin-options"),this.$win=a(b),this.sections={},this.didScroll=!1,this.$doc=a(c),this.docHeight=this.$doc.height()};e.prototype={defaults:{navItems:"a",currentClass:"current",changeHash:!1,easing:"swing",filter:"",scrollSpeed:750,scrollThreshold:.5,begin:!1,end:!1,scrollChange:!1},init:function(){return this.config=a.extend({},this.defaults,this.options,this.metadata),this.$nav=this.$elem.find(this.config.navItems),""!==this.config.filter&&(this.$nav=this.$nav.filter(this.config.filter)),this.$nav.on("click.onePageNav",a.proxy(this.handleClick,this)),this.getPositions(),this.bindInterval(),this.$win.on("resize.onePageNav",a.proxy(this.getPositions,this)),this},adjustNav:function(a,b){a.$elem.find("."+a.config.currentClass).removeClass(a.config.currentClass),b.addClass(a.config.currentClass)},bindInterval:function(){var b,a=this;a.$win.on("scroll.onePageNav",function(){a.didScroll=!0}),a.t=setInterval(function(){b=a.$doc.height(),a.didScroll&&(a.didScroll=!1,a.scrollChange()),b!==a.docHeight&&(a.docHeight=b,a.getPositions())},250)},getHash:function(a){return a.attr("href").split("#")[1]},getPositions:function(){var c,d,e,b=this;b.$nav.each(function(){c=b.getHash(a(this)),e=a("#"+c),e.length&&(d=e.offset().top,b.sections[c]=Math.round(d))})},getSection:function(a){var b=null,c=Math.round(this.$win.height()*this.config.scrollThreshold);for(var d in this.sections)this.sections[d]-c<a&&(b=d);return b},handleClick:function(c){var d=this,e=a(c.currentTarget),f=e.parent(),g="#"+d.getHash(e);f.hasClass(d.config.currentClass)||(d.config.begin&&d.config.begin(),d.adjustNav(d,f),d.unbindInterval(),d.scrollTo(g,function(){d.config.changeHash&&(b.location.hash=g),d.bindInterval(),d.config.end&&d.config.end()})),c.preventDefault()},scrollChange:function(){var c,a=this.$win.scrollTop(),b=this.getSection(a);null!==b&&(c=this.$elem.find('a[href$="#'+b+'"]').parent(),c.hasClass(this.config.currentClass)||(this.adjustNav(this,c),this.config.scrollChange&&this.config.scrollChange(c)))},scrollTo:function(b,c){var d=a(b).offset().top;a("html, body").animate({scrollTop:d},this.config.scrollSpeed,this.config.easing,c)},unbindInterval:function(){clearInterval(this.t),this.$win.unbind("scroll.onePageNav")}},e.defaults=e.prototype.defaults,a.fn.onePageNav=function(a){return this.each(function(){new e(this,a).init()})}}(jQuery,window,document);
-
 /***/ })
 
 /******/ 	});
@@ -10846,8 +10835,6 @@ var jquery_nice_select_min = __webpack_require__(899);
 var jquery_fancybox_min = __webpack_require__(319);
 // EXTERNAL MODULE: ./plugins/fixto/fixto.min.js
 var fixto_min = __webpack_require__(761);
-// EXTERNAL MODULE: ./plugins/one-page-nav/jquery.nav.min.js
-var jquery_nav_min = __webpack_require__(269);
 ;// CONCATENATED MODULE: ./node_modules/ssr-window/ssr-window.esm.js
 /**
  * SSR Window 4.0.2
@@ -20022,7 +20009,6 @@ var jquery_marquee_min = __webpack_require__(3);
 
 
 
-
 $(document).ready(function () {
   // nice-select
   $('.select-block select').niceSelect();
@@ -20035,7 +20021,14 @@ $(document).ready(function () {
 
   //fix-block
   $('.help-menu').fixTo('.help .content', {
-    top: 100,
+    top: 50,
+    useNativeSticky:true
+  });
+
+
+  //fix-block
+  $('.article .left').fixTo('.article .content', {
+    top: 50,
     useNativeSticky:true
   });
 
@@ -20073,6 +20066,20 @@ $(document).ready(function () {
     },
     pagination: {
       el: ".people-pagination",
+      type: "progressbar",
+    },
+  });
+
+  //slider
+  var swiperPeople2 = new core(".slider-people-2", {
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".next-people-2",
+      prevEl: ".prev-people-2",
+    },
+    pagination: {
+      el: ".people-pagination-2",
       type: "progressbar",
     },
   });
@@ -20178,6 +20185,48 @@ $(document).ready(function () {
 
   $('.blog .item p').dotdotdot({
     height: 50
+  });
+
+
+  //onePageNav
+  if($('.article').length){
+    $('a[href^="#"]').click(function() {
+      $('html,body').animate({ scrollTop: $($(this).attr('href')).offset().top -60 }, 'slow','swing');
+      return false;
+    });
+  }
+
+  function onePageNav( switchName ) {
+    const navSwitch = $(switchName);
+    const deductHeight = 60;
+    let navArr = [];
+
+
+    navSwitch.each(function(i){
+      let navSwitchHref = $(this).attr('href');
+      let tgtOff = $(navSwitchHref).offset().top - deductHeight;
+      navArr.push([]);
+      navArr[i].switch = $(this);
+      navArr[i].tgtOff = tgtOff;
+    });
+//        console.log(navArr);
+    $(window).scroll(function () {
+      for( let i = 0; i < navArr.length; i++ ){
+        let scroll = $(window).scrollTop();
+        let tgtKey = navArr[i];
+        let tgtSwitch = tgtKey.switch;
+        let tgtOff = tgtKey.tgtOff;
+        if ( scroll >= tgtOff ) {
+          navSwitch.removeClass('is-current');
+          tgtSwitch.addClass('is-current');
+        } else {
+          tgtSwitch.removeClass('is-current');
+        }
+      }
+    });
+  }
+  $(window).on('load resize',function(){
+    onePageNav('.js-curnav-switch');
   });
 
 });

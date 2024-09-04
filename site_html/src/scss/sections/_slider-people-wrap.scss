@@ -162,6 +162,111 @@
 .slider-people-wrap  .swiper-wrapper{
   height: fit-content;
 }
+
+.slider-people-wrap-bg-blue{
+  position: relative;
+  z-index: 10;
+  background: $yellow;
+  padding: 115px 0 110px;
+  .bg{
+    background: $lightBlue;
+    border-radius: 48px 48px 0 0;
+  }
+  .h2{
+    color: $colorTitle;
+  }
+  .title-wrap .wrap .swiper-pagination span{
+    background: $colorTitle;
+  }
+  .nav-wrap .btn{
+    border-color: $colorTitle;
+  }
+  .title-wrap .wrap{
+    padding-right: 0;
+  }
+  .title{
+    width: 340px;
+  }
+   .title-wrap .wrap {
+    width: calc(100% - 350px);
+  }
+  .text-wrap{
+    margin-top: -3px;
+    width: 50%;
+    p{
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 120%;
+      letter-spacing: 0.5px;
+      margin: 0!important;
+    }
+  }
+  .title-wrap{
+    margin-bottom: 64px;
+  }
+}
+
+.slider-people-2{
+  overflow: visible;
+  .swiper-slide{
+    border: 1px solid rgb(0, 191, 230);
+    border-radius: 16px;
+    box-shadow: 0px 4px 10px 0px rgba(45, 39, 77, 0.08),inset 0px 0px 10px 0px rgba(184, 228, 253, 0.32);
+    background: rgb(255, 255, 255);
+    width: 420px;
+    padding: 24px 24px;
+    p{
+      line-height: 120%;
+      margin: 0;
+    }
+    figure{
+      height: 320px;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+    .text-title-wrap{
+      position: relative;
+      h6{
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 120%;
+        margin-bottom: -3px;
+        color: $red;
+        letter-spacing: 1.5px;
+      }
+      .info{
+        color: $red;
+        font-weight: 500;
+      }
+    }
+    .info-wrap{
+      padding-right: 50px;
+      margin-bottom: 25px;
+    }
+    .link-wrap{
+      position: absolute;
+      top: 3px;
+      right: -2px;
+      a{
+        width: 48px;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        color: #fff;
+        background: $colorTitle;
+        font-size: 16px;
+        line-height: 1;
+        &:hover{
+          background: $red;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1440px) {
 
 }
@@ -211,5 +316,28 @@
   }
   .slider-people .swiper-slide{
     padding: 15px;
+  }
+  .slider-people-wrap-bg-blue .text-wrap{
+    margin-top: 30px;
+    width: 100%;
+  }
+  .slider-people-2 .swiper-slide{
+    width: 280px;
+    padding: 15px 15px;
+  }
+  .slider-people-2 .swiper-slide figure{
+    height: 248px;
+    margin-bottom: 20px;
+  }
+  .slider-people-2 .swiper-slide .info-wrap{
+    padding-right: 35px;
+  }
+  .slider-people-2 .swiper-slide .text-title-wrap h6{
+    font-size: 20px;
+  }
+  .slider-people-2 .swiper-slide .link-wrap a{
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
   }
 }
