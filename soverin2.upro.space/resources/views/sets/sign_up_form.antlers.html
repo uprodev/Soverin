@@ -1,0 +1,30 @@
+<section class="form-slider">
+  <div class="content-width">
+    <div class="content">
+      <div class="form-wrap"><h2 class="h2">{{  title }}</h2>
+
+        {{ partial:partials/_form_cta left="true"}}
+
+
+
+
+      </div>
+      <div class="slider-wrap">
+        <div class="swiper info-slider">
+          <div class="swiper-wrapper">
+            {{ content_part }}
+            <div class="swiper-slide swiper-slide-{{ index+1 }}">
+              <div class="text"><h3 class="h3 black">{{ title }}</h3>
+                <p>{{ description }}</p>
+                {{  if image }}
+                <figure><img src="{{ image:url }}" alt=""></figure>
+                  {{  /if }}
+              </div>
+            </div>
+            {{ /content_part }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

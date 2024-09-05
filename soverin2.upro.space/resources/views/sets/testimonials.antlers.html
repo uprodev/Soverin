@@ -1,0 +1,34 @@
+<section class="slider-people-wrap">
+  <div class="content-width">
+    <div class="title-wrap">
+      <div class="title"><h2 class="h2">What are people saying</h2></div>
+      <div class="wrap">
+        <div class="swiper-pagination people-pagination"></div>
+        <div class="nav-wrap">
+          <div class="swiper-button-next next-people btn"><img src="/public/dist/images/icon-4.svg" alt="Next"></div>
+          <div class="swiper-button-prev prev-people btn btn-revers"><img src="/public/dist/images/icon-4.svg" alt="Previous"></div>
+        </div>
+      </div>
+    </div>
+    <div class="slider-wrap">
+      <div class="swiper slider-people">
+        <div class="swiper-wrapper">
+          {{ testimonials_field }}
+          <div class="swiper-slide">
+            <figure><img src="{{ image:0:url }}" alt="{{ name }}"></figure>
+            <div class="text-wrap">
+              <div class="text-title-wrap">
+                <h6>{{ name }}</h6>
+                <p>{{ position }}</p>
+              </div>
+              <div class="text">
+                <p>{{ review }}</p>
+              </div>
+            </div>
+          </div>
+          {{ /testimonials_field }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
