@@ -38,6 +38,12 @@ $(document).ready(function () {
     useNativeSticky:true
   });
 
+  //fix-block
+  $('.text-privacy .wrap-menu').fixTo('.text-privacy .content', {
+    top: 50,
+    useNativeSticky:true
+  });
+
   //mob footer show/hide menu
   if(window.innerWidth < 576){
     $(document).on('click', 'footer .footer-menu-wrap .item h5', function (e){
@@ -195,7 +201,7 @@ $(document).ready(function () {
 
 
   //onePageNav
-  if($('.article').length){
+  if($('.fix').length){
     $('a[href^="#"]').click(function() {
       $('html,body').animate({ scrollTop: $($(this).attr('href')).offset().top -60 }, 'slow','swing');
       return false;

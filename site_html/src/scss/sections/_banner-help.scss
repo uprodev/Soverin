@@ -66,6 +66,19 @@
   }
 }
 
+.privacy-banner{
+  padding-top: 100px;
+  h1{
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 135%;
+    margin-bottom: 10px;
+  }
+  .content{
+    height: 315px;
+  }
+}
+
 @media (max-width: 1440px) {
   .banner-help h1{
     font-size: 80px;
@@ -89,7 +102,7 @@
     height: auto;
     min-height: 250px;
   }
-  .banner-help h1{
+  .banner-help h1, .privacy-banner h1{
     font-size: 60px;
     margin-bottom: 15px;
   }
@@ -113,6 +126,9 @@
 @media (max-width:767px) {
   .banner-help .bg img {
     width: 100px;
+  }
+  .privacy-banner h1{
+    font-size: 40px;
   }
 }
 
