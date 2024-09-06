@@ -1,6 +1,7 @@
 # Laravel related files
 /WP/
 /html/
+/site_html/
 /vendor/
 /node_modules/
 .env
