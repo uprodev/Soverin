@@ -203,7 +203,7 @@ $(document).ready(function () {
   //onePageNav
   if($('.fix').length){
     $('a[href^="#"]').click(function() {
-      $('html,body').animate({ scrollTop: $($(this).attr('href')).offset().top -60 }, 'slow','swing');
+      $('html,body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 'slow','swing');
       return false;
     });
   }
