@@ -22,23 +22,24 @@
   <div class="content-width"><h2 class="h2">Previous Articles</h2>
     <div class="sort-list">
       <form action="#" class="form-select">
-        <div class="input-wrap"><input type="checkbox" id="select-1" name="select"> <label for="select-1">View
-          all</label></div>
-        <div class="input-wrap"><input type="checkbox" id="select-2" name="select" checked="checked"> <label
-          for="select-2">Tag 1</label></div>
-        <div class="input-wrap"><input type="checkbox" id="select-3" name="select" checked="checked"> <label
-          for="select-3">Tag 2</label></div>
-        <div class="input-wrap"><input type="checkbox" id="select-4" name="select"> <label for="select-4">Tag
-          3</label></div>
-        <div class="input-wrap"><input type="checkbox" id="select-5" name="select"> <label for="select-5">Tag
-          4</label></div>
-        <div class="input-wrap"><input type="checkbox" id="select-6" name="select"> <label for="select-6">Tag
-          5</label></div>
+
+        <div class="input-wrap">
+          <input type="checkbox" id="select-0" name="select">
+          <label for="select-0">View
+            all</label>
+        </div>
+
+        {{ taxonomy:tag }}
+          <div class="input-wrap">
+            <input type="checkbox" value="{{  id }}" id="select-{{ index + 1  }}" name="tag[]">
+            <label for="select-{{ index + 1 }}">{{ title }} </label>
+          </div>
+        {{ /taxonomy:tag }}
+
       </form>
       <div class="wrap-search">
         <form action="#" class="form-search"><label for="search"></label> <input type="search" id="search"
-                                                                                 name="search"
-                                                                                 placeholder="Search the blog">
+                                                                                 name="search" placeholder="Search the blog">
           <button type="submit" class="btn"><img src="images/search.svg" alt=""></button>
         </form>
       </div>
