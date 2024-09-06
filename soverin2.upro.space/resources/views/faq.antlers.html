@@ -1,0 +1,57 @@
+<section class="banner-help faq-banner">
+  <div class="content-width">
+    <div class="content">
+      <div class="bg">
+        <img src="images/img-18.png" alt="">
+      </div>
+      <div class="wrap">
+        <h1>FAQS</h1>
+        <p>Here are some of the most frequently
+          asked questions.</p>
+      </div>
+    </div>
+    <div class="text">
+      <p>Privacy matters. The surveillance society snuck up on us, following our digital footprints.
+        We want to put you back in control of your data. Sign up for your private mailbox with Soverin.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="content-width">
+    <h2 class="title-big">General FAQ</h2>
+    <div class="tabs">
+
+      <ul class="tabs-menu">
+        {{ taxonomy:category_faq }}
+          <li class="{{ index === 0 ? 'is-active' : '' }}">
+            {{ title }}
+          </li>
+        {{ /taxonomy:category_faq }}
+      </ul>
+
+
+      <div class="tab-content">
+        {{ taxonomy:category_faq }}
+        <div class="tab-item tab-item-{{ index + 1}}">
+          <ul class="accordion">
+            {{ entries:faq where="category_faq:slug=category_faq:slug" }}
+
+                <li class="accordion-item ">
+                  <div class="accordion-thumb"><p>{{ title }}</p></div>
+                  <div class="accordion-panel">
+                    <div class="wrap">
+                      <p>{{ content }}</p>
+                    </div>
+                  </div>
+                </li>
+
+            {{ /entries:faq }}
+
+          </ul>
+        </div>
+        {{ /taxonomy:category_faq }}
+      </div>
+    </div>
+  </div>
+</section>

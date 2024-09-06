@@ -1,0 +1,132 @@
+<section class="article-banner">
+  <div class="content-width">
+    <div class="content">
+      <div class="text">
+        <ul class="breadcrumb-back">
+          <li><a href="/blog"><span><i class="fa-light fa-arrow-left"></i></span>All Posts</a></li>
+        </ul>
+
+
+
+
+        {{ author }}
+        <div class="user-block">
+          {{ avatar }}
+          <div class="img-wrap">
+            <img src="{{ avatar }}" alt="">
+          </div>
+          {{ /avatar }}
+          <div class="user-text">
+            <p class="name">{{ name }}</p>
+            <ul>
+              <li>{{ position }}</li>
+              <li>{{ content | read_time(180) }} min read</li>
+            </ul>
+            <p class="data">{{ date| format('d.m.Y') }}</p>
+          </div>
+        </div>
+        {{ /author }}
+
+
+        <h1 class="h2">{{ title }}</h1>
+        <p>{{ excerpt  }}</p>
+      </div>
+      {{  if image }}
+        <figure>
+          <img src="{{ image:url }}" alt="">
+        </figure>
+      {{ /if }}
+    </div>
+  </div>
+</section>
+
+<section class="article banner-h1">
+  <div class="content-width">
+    <div class="content">
+      <div class="left">
+        <ul class="article-menu">
+
+        </ul>
+
+
+        <h3 class="h3">Subscribe</h3>
+        <h6>Join our newsletter to stay up to date on features
+          and releases.</h6>
+
+        {{ form:subscribe id="formCta"  class="form-subscribe" }}
+          {{ if success }}
+            <div class="bg-green-300 text-white p-2">
+              {{ success }}
+            </div>
+          {{ else }}
+
+            {{ if errors }}
+              <div class="bg-red-300 text-white p-2">
+                {{ errors }}
+                {{ value }}<br>
+                {{ /errors }}
+              </div>
+            {{ /if }}
+
+
+            {{ fields }}
+            <div class="email-wrap">
+              <label for="{{  handle }}"></label>
+              {{ field }}
+              <button type="submit" class="btn-default">Subscribe</button>
+            </div>
+            {{ /fields }}
+
+            {{ text }}
+
+          {{ /if }}
+          <div class="submitResult"></div>
+
+        {{ /form:subscribe }}
+
+
+
+        <!-- AddToAny BEGIN -->
+        <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+
+          <ul class="soc">
+            <li><a class="a2a_button_linkedin" href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a class="a2a_button_x" href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a class="a2a_button_email" href="#"><i class="fa-light fa-envelope"></i></a></li>
+          </ul>
+        </div>
+        <script async src="https://static.addtoany.com/menu/page.js"></script>
+        <!-- AddToAny END -->
+
+
+      </div>
+      <div class="text content-area">
+
+        {{ content }}
+        {{ if type == "text" }}
+          {{ text }}
+        {{ /if }}
+
+        {{ if type == "image" }}
+          {{ if image }}
+            <figure>
+              <img src="{{ image:url }}" alt="">
+              {{ if caption }}
+                <figcaption>{{ caption }}</figcaption>
+              {{ /if }}
+            </figure>
+          {{ /if }}
+        {{ /if }}
+
+        {{ /content }}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
