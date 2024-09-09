@@ -1,0 +1,20 @@
+title: Blog
+sites:
+  - default
+  - nederlands
+template: blog/show
+layout: layout
+taxonomies:
+  - tag
+revisions: false
+route: '/blog/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

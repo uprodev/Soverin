@@ -9,12 +9,20 @@
                 <div class="account">
                     <div class="title">
                         <ul class="breadcrumb">
-                            {{ nav:breadcrumbs }}
-                            <li{{ if is_current }} class="current"{{ /if }}>
-                                <a href="{{ url }}">{{ title }}</a>
+
+                          <li class="">
+                            <a href="/">Soverin</a>
+                            <span><i class="fa-solid fa-chevron-right"></i></span>
+                          </li>
+
+                            <li>
+                                <a href="{{ category_help:0:url }}">{{ category_help:0:title }}</a>
                                 <span><i class="fa-solid fa-chevron-right"></i></span>
                             </li>
-                            {{ /nav:breadcrumbs }}
+
+                          <li>{{ title }}</li>
+
+
                         </ul>
 
                         <h2>{{ title }}</h2>
@@ -41,7 +49,7 @@
                       {{ /content }}
 
                         <div class="btn-wrap">
-                            <a href="https://soverin.upro.space/category_help/account/" class="btn-default">Go back</a>
+                            <a href="{{ category_help:0:url }}" class="btn-default">{{ trans:strings.go_back }}</a>
                         </div>
                     </div>
 

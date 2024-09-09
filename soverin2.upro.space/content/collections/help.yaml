@@ -1,10 +1,14 @@
 title: Help
+sites:
+  - default
+  - nederlands
+propagate: false
 template: help/show
 layout: layout
 taxonomies:
   - category_help
 revisions: false
-route: '/help/{slug}'
+route: '/help/{category_help_url}/{slug}'
 sort_dir: asc
 date_behavior:
   past: public

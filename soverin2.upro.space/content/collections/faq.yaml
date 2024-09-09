@@ -1,4 +1,7 @@
 title: FAQ
+sites:
+  - default
+  - nederlands
 taxonomies:
   - category_faq
 revisions: false

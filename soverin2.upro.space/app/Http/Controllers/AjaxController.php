@@ -30,6 +30,7 @@ class AjaxController extends Controller
 
 
         foreach ($entries as $entry) {
+
             $html .= view('partials._post', $entry->toAugmentedArray())->render();
         }
         return $html;
