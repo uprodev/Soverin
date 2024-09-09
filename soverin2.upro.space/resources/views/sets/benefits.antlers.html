@@ -1,0 +1,18 @@
+<section class="item-3x">
+  <div class="content-width">
+    <h2 class="h2">{{ title }}</h2>
+    <div class="content">
+      {{ benefits_list }}
+        <div class="item">
+          <a href="{{ link_field }}">
+            <h3 class="h3">{{ title_benefits }}</h3>
+            <p>{{ description_benefits }}</p>
+          </a>
+        </div>
+      {{ /benefits_list }}
+    </div>
+    <div class="btn-wrap">
+      <a href="{{ button:url }}" class="btn-border"><span>{{ button:title }}</span></a>
+    </div>
+  </div>
+</section>
