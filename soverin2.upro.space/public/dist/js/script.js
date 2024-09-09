@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
 
 
-    //form
+    //forms
         $.ajaxSetup({
             headers: { 'X-CSRF-TOKEN': $('input[name="_token"]').val() }
         });
@@ -9,7 +9,10 @@ jQuery(document).ready(function($){
         form.submit(function(e) {
             e.preventDefault();
 
-            $.ajax({url: form.attr('action')})
+            $.ajax({
+              url: form.attr('action'),
+              data: form.serialize()
+            })
                 .done(function() {
                    $('.submitResult').html('Done')
                 })
@@ -39,4 +42,30 @@ jQuery(document).ready(function($){
         $menu.append($menuItem);
         headingIndex++;
     });
+
+
+  //filter
+
+  var form = $('#filter');
+  $('#filter input').change(function(e) {
+    e.preventDefault();
+
+    $.ajax({
+      url: form.attr('action'),
+      data: form.serialize()
+    })
+      .done(function(response) {
+       // console.log(response)
+
+        $('.content-posts').html(response)
+      })
+
+      .fail(function() {
+        console.log('boo')
+      });
+
+    return false;
+  });
+
+
 })

@@ -9,21 +9,36 @@ class AjaxController extends Controller
 {
     public function handleAjax(Request $request)
     {
-        $data = $request->input('data');
+        $data = $request->input('tag');
+        $html = '';
 
-        $entries = Entry::query()
-            ->where('collection', 'blog')
-            ->limit(9)
-            ->get();
+        if ($data === 'all') {
+            $entries = Entry::query()
+                ->where('collection', 'blog')
+                ->limit(9)
+                ->get();
+        } else {
+            $entries = Entry::query()
+                ->where('collection', 'blog')
+                ->whereTaxonomyIn($data)
+                ->limit(9)
+                ->get();
+        }
 
-        return view('blog.index', ['entries' => $entries]);
+
+        foreach ($entries as $entry) {
+            $html .= view('partials._post', $entry->toAugmentedArray())->render();
+        }
+        return $html;
+
+        //return view('blog.index', ['entries' => $entries]);
 
 
-//        return Response::json([
-//            'status' => 'success',
-//            'message' => 'Данные получены успешно',
-//            'received_data' => $data
-//        ]);
+        return Response::json([
+            'status' => 'success',
+            'message' => 'Данные получены успешно',
+            'received_data' => $data
+        ]);
     }
 }
 
