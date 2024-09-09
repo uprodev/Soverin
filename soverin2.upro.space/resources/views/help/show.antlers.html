@@ -21,8 +21,25 @@
 
                     </div>
                     <div class="default-text">
-                        {{ content }}
-                        
+                      {{ content }}
+
+                      {{ if type == "text" }}
+                        {{ text }}
+                      {{ /if }}
+
+                      {{ if type == "image" }}
+                        {{ if image }}
+                          <figure>
+                            <img src="{{ image:url }}" alt="">
+                            {{ if caption }}
+                              <figcaption>{{ caption }}</figcaption>
+                            {{ /if }}
+                          </figure>
+                        {{ /if }}
+                      {{ /if }}
+
+                      {{ /content }}
+
                         <div class="btn-wrap">
                             <a href="https://soverin.upro.space/category_help/account/" class="btn-default">Go back</a>
                         </div>

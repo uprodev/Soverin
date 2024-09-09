@@ -101,20 +101,21 @@
       <div class="text content-area">
 
         {{ content }}
-        {{ if type == "text" }}
-          {{ text }}
-        {{ /if }}
 
-        {{ if type == "image" }}
-          {{ if image }}
-            <figure>
-              <img src="{{ image:url }}" alt="">
-              {{ if caption }}
-                <figcaption>{{ caption }}</figcaption>
-              {{ /if }}
-            </figure>
+          {{ if type == "text" }}
+            {{ text }}
           {{ /if }}
-        {{ /if }}
+
+          {{ if type == "image" }}
+            {{ if image }}
+              <figure>
+                <img src="{{ image:url }}" alt="">
+                {{ if caption }}
+                  <figcaption>{{ caption }}</figcaption>
+                {{ /if }}
+              </figure>
+            {{ /if }}
+          {{ /if }}
 
         {{ /content }}
 
