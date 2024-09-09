@@ -10,20 +10,23 @@ class AjaxController extends Controller
     public function handleAjax(Request $request)
     {
         $data = $request->input('tag');
+        $search = $request->input('search');
         $html = '';
 
-        if ($data === 'all') {
-            $entries = Entry::query()
-                ->where('collection', 'blog')
-                ->limit(9)
-                ->get();
-        } else {
-            $entries = Entry::query()
-                ->where('collection', 'blog')
-                ->whereTaxonomyIn($data)
-                ->limit(9)
-                ->get();
+        $query = Entry::query()->where('collection', 'blog');
+
+        if (!empty($search)) {
+
+            $query->where('content', 'like', "%{$search}%")
+                  ->orWhere('title', 'like', "%{$search}%");
+
         }
+
+        if ($data !== 'all') {
+            $query->whereTaxonomyIn($data);
+        }
+
+        $entries = $query->limit(9)->get();
 
 
         foreach ($entries as $entry) {

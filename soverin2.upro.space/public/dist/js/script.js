@@ -47,7 +47,7 @@ jQuery(document).ready(function($){
   //filter
 
   var form = $('#filter');
-  $('#filter input').change(function(e) {
+  $('#filter input').on('change input', function(e) {
     e.preventDefault();
 
     $.ajax({
@@ -65,6 +65,12 @@ jQuery(document).ready(function($){
       });
 
     return false;
+  });
+
+  document.getElementById('search').addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+    }
   });
 
 

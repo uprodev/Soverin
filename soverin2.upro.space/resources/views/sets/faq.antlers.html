@@ -1,0 +1,38 @@
+  <section class="faq">
+  <div class="content-width">
+    <h2 class="title-big">{{ title  }}</h2>
+  <div class="tabs">
+
+    <ul class="tabs-menu">
+      {{ taxonomy:category_faq }}
+        <li class="{{ index === 0 ? 'is-active' : '' }}">
+          {{ title }}
+        </li>
+      {{ /taxonomy:category_faq }}
+    </ul>
+
+
+  <div class="tab-content">
+  {{ taxonomy:category_faq }}
+  <div class="tab-item tab-item-{{ index + 1}}">
+  <ul class="accordion">
+  {{ entries:faq where="category_faq:slug=category_faq:slug" }}
+
+  <li class="accordion-item ">
+  <div class="accordion-thumb"><p>{{ title }}</p></div>
+  <div class="accordion-panel">
+  <div class="wrap">
+  <p>{{ content }}</p>
+  </div>
+  </div>
+  </li>
+
+    {{ /entries:faq }}
+
+    </ul>
+    </div>
+    {{ /taxonomy:category_faq }}
+  </div>
+  </div>
+  </div>
+  </section>

@@ -1,1 +1,33 @@
+<section class="title-marquee">
+  <div class="content-width">
+    <div class="title">
+      <h2 class="title-big black">{{ title }}</h2>
+      <h6 class="text-up">
+        {{ subtitle }}</h6>
+      <h2 class="price h2 black">{{ price }}</h2></div>
+  </div>
+  <div class="marquee marquee-1">
 
+    {{ text_boxes }}
+      <div class="item
+      {{ index == 0 ||  index%4 ==0  ? '' : '' }}
+      {{ index == 1 ||  index%3 ==0  ? 'bg-blue' : '' }}
+      {{ index == 2 ||  index%8 ==0  ? 'bg-dark-blue' : '' }} ">
+        {{ text }}
+      </div>
+    {{ /text_boxes }}
+
+  </div>
+  <div class="marquee marquee-2">
+
+    {{ text_boxes_2 }}
+    <div class="item
+      {{ index == 0 ||  index%4 ==0  ? 'bg-blue' : '' }}
+      {{ index == 1 ||  index%5 ==0  ? 'bg-red' : '' }}
+       ">
+      {{ text }}
+    </div>
+    {{ /text_boxes_2 }}
+ 
+  </div>
+</section>

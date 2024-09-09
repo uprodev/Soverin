@@ -20,8 +20,8 @@
 <section class="blog">
   <div class="bg"></div>
   <div class="content-width"><h2 class="h2">Previous Articles</h2>
-    <div class="sort-list">
-      <form action="/ajax/handle" id="filter" class="form-select">
+    <form class="sort-list" action="/ajax/handle" id="filter">
+      <div  class="form-select">
 
         <div class="input-wrap">
           <input type="radio" id="select-0" name="tag" value="all" checked>
@@ -36,15 +36,15 @@
           </div>
         {{ /taxonomy:tag }}
 
-      </form>
-      <div class="wrap-search">
-        <form action="#" class="form-search"><label for="search"></label>
-          <input type="search" id="search"
-                                                                                 name="search" placeholder="Search the blog">
-          <button type="submit" class="btn"><img src="/public/dist/images/search.svg" alt=""></button>
-        </form>
       </div>
-    </div>
+      <div class="wrap-search">
+        <div  class="form-search"><label for="search"></label>
+          <input type="search" id="search"
+                 name="search" placeholder="Search the blog">
+          <button type="submit" class="btn"><img src="/public/dist/images/search.svg" alt=""></button>
+        </div>
+      </div>
+    </form>
     <div class="content content-posts">
       {{ collection from="blog"  limit="9" offset="3"  }}
       {{ partial src="partials/_post" }}
