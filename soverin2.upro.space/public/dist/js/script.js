@@ -5,7 +5,7 @@ jQuery(document).ready(function($){
         $.ajaxSetup({
             headers: { 'X-CSRF-TOKEN': $('input[name="_token"]').val() }
         });
-        var form = $('#formCta');
+        var form = $('.formCta');
         form.submit(function(e) {
             e.preventDefault();
 
@@ -13,8 +13,9 @@ jQuery(document).ready(function($){
               url: form.attr('action'),
               data: form.serialize()
             })
-                .done(function() {
+                .done(function(response) {
                    $('.submitResult').html('Done')
+                  console.log(response)
                 })
 
                 .fail(function() {

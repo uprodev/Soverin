@@ -14,3 +14,4 @@ use App\Http\Controllers\AjaxController;
 
 
 Route::get('/ajax/handle', [AjaxController::class, 'handleAjax']);
+
