@@ -1,0 +1,28 @@
+<section class="email-solution email-solution-1">
+  <div class="bg">
+    <img src="{{ background:url }}" alt="">
+  </div>
+  <div class="content-width">
+    <figure>
+      <img src="{{ image:url }}" alt="">
+    </figure>
+    <div class="text">
+      <div class="title">
+        <h2 class="h2">{{ title }}</h2>
+        <p>{{ description }} </p>
+      </div>
+
+      {{ if solutions }}
+        <ol>
+          {{ solutions }}
+            <li>
+              <h6>{{ title }}</h6>
+              <p>{{ text }}</p>
+            </li>
+          {{ /solutions }}
+
+        </ol>
+      {{ /if }}
+    </div>
+  </div>
+</section>

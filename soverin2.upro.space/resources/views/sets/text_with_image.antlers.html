@@ -11,38 +11,33 @@
         </div>
     </section>
 
-    <section class="item-3x">
-        <div class="content-width">
-            <h2 class="h2">Benefits of trusting Soverin</h2>
-            <div class="content">
-                <div class="item">
-                    <a href="#">
-                        <h3 class="h3">Cost<br>
-                            Savings</h3>
-                        <p>Avoid the expense of building
-                            and maintaining your own email infrastructure.</p>
-                    </a>
+    {{ if default_benefits}}
+
+        {{ partial:benefits}}
+
+    {{ else }}
+
+        <section class="item-3x">
+            <div class="content-width">
+                <h2 class="h2">{{ title_benefits }}</h2>
+                <div class="content">
+                    {{ benefits_list }}
+                    <div class="item">
+                        <a href="{{ link_field }}">
+                            <h3 class="h3">{{ title_benefits }}</h3>
+                            <p>{{ description_benefits }}</p>
+                        </a>
+                    </div>
+                    {{ /benefits_list }}
                 </div>
-                <div class="item">
-                    <a href="#">
-                        <h3 class="h3">Expertise and experience</h3>
-                        <p>Rely on our years of experience
-                            to provide a reliable, white-label email hosting service that works.</p>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#">
-                        <h3 class="h3">Focus on you
-                            core business</h3>
-                        <p>Let us handle the complexities
-                            of email, you can focus on what
-                            you do best.</p>
-                    </a>
-                </div>
+
+                {{ if button:url || button:title }}
+                    <div class="btn-wrap">
+                        <a href="{{ button:url }}" class="btn-border"><span>{{ button:title }}</span></a>
+                    </div>
+                {{ /if}}
             </div>
-            <div class="btn-wrap">
-                <a href="#" class="btn-border"><span>Learn more</span></a>
-            </div>
-        </div>
-    </section>
+        </section>
+
+    {{ /if }}
 </div>
