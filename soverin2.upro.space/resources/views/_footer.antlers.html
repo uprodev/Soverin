@@ -54,8 +54,12 @@
       <div class="item item-5"><h5><a href="#">Language</a></h5>
         <div class="mob">
           <ul>
-            <li><a href="#"><img src="images/flag-1.png" alt="">Nederlands</a></li>
-            <li><a href="#"><img src="images/flag-2.png" alt="">English</a></li>
+            {{ locales }}
+              <li><a href="{{ permalink }}">View in {{ locale:name }}</a></li>
+            {{ /locales }}
+              
+            <li><a href="#"><img src="/public/dist/images/flag-1.png" alt="">Nederlands</a></li>
+            <li><a href="#"><img src="/public/dist/images/flag-2.png" alt="">English</a></li>
           </ul>
         </div>
       </div>
@@ -64,9 +68,9 @@
   <div class="bottom">
     <div class="content-width">
       <ul>
-        <li><p>2024 Soverin B. V.All rights reserved.</p></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
+        <li><p>{{ date | format('Y')}} Soverin B. V.All rights reserved.</p></li>
+        <li><a href=" /privacy">Privacy Policy</a></li>
+        <li><a href=/general-terms-and-conditions">Terms of Service</a></li>
       </ul>
     </div>
   </div>

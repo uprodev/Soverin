@@ -67,6 +67,7 @@ jQuery(document).ready(function($){
     return false;
   });
 
+  if ($('#search').length)
   document.getElementById('search').addEventListener('keypress', function (event) {
     if (event.key === 'Enter') {
       event.preventDefault();
