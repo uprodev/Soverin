@@ -50,3 +50,30 @@
     }
   }
 }
+
+.breadcrumb-back{
+  margin-bottom: 33px;
+  a{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    font-size: 20px;
+    line-height: 1.5;
+    span{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $red;
+      border-radius: 100%;
+      margin-right: 17px;
+      font-size: 16px;
+      line-height: 1;
+      color: $red;
+      width: 32px;
+      height: 32px;
+    }
+    &:hover{
+      color: $red;
+    }
+  }
+}

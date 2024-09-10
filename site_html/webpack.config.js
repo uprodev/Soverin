@@ -9,7 +9,7 @@ const webpack = require('webpack');
 
 
 const options = {
-  title: "Venticare",
+  title: "Soverin",
   meta: {
     charset: {
       charset: "UTF-8",
@@ -53,6 +53,7 @@ module.exports = {
       template: "./src/index.html",
       meta: options.meta,
       inject: 'body',
+      minify: false,
     }),
     new HtmlWebpackPlugin({
       title: options.title,
@@ -60,21 +61,22 @@ module.exports = {
       template: "./src/home.html",
       meta: options.meta,
       inject: 'body',
+      minify: false,
     }),
-    new HtmlWebpackPlugin({ title: options.title, filename: "isp.html", template: "./src/isp.html", meta: options.meta }),
-    new HtmlWebpackPlugin({ title: options.title, filename: "smb.html", template: "./src/smb.html", meta: options.meta }),
-    new HtmlWebpackPlugin({ title: options.title, filename: "resellers.html", template: "./src/resellers.html", meta: options.meta }),
-    new HtmlWebpackPlugin({ title: options.title, filename: "pricing.html", template: "./src/pricing.html", meta: options.meta }),
-    new HtmlWebpackPlugin({ title: options.title, filename: "features.html", template: "./src/features.html", meta: options.meta }),
-    new HtmlWebpackPlugin({ title: options.title, filename: "blog.html", template: "./src/blog.html", meta: options.meta }),
-    new HtmlWebpackPlugin({ title: options.title, filename: "article.html", template: "./src/article.html", meta: options.meta }),
-    new HtmlWebpackPlugin({ title: options.title, filename: "team.html", template: "./src/team.html", meta: options.meta }),
-    new HtmlWebpackPlugin({ title: options.title, filename: "faq.html", template: "./src/faq.html", meta: options.meta }),
-    new HtmlWebpackPlugin({ title: options.title, filename: "technical.html", template: "./src/technical.html", meta: options.meta }),
-    new HtmlWebpackPlugin({ title: options.title, filename: "help.html", template: "./src/help.html", meta: options.meta }),
-    new HtmlWebpackPlugin({ title: options.title, filename: "help2.html", template: "./src/help2.html", meta: options.meta }),
-    new HtmlWebpackPlugin({ title: options.title, filename: "conditions.html", template: "./src/conditions.html", meta: options.meta }),
-    new HtmlWebpackPlugin({ title: options.title, filename: "privacy.html", template: "./src/privacy.html", meta: options.meta }),
+    new HtmlWebpackPlugin({ title: options.title, filename: "isp.html", template: "./src/isp.html", meta: options.meta, minify: false, }),
+    new HtmlWebpackPlugin({ title: options.title, filename: "smb.html", template: "./src/smb.html", meta: options.meta, minify: false, }),
+    new HtmlWebpackPlugin({ title: options.title, filename: "resellers.html", template: "./src/resellers.html", meta: options.meta, minify: false, }),
+    new HtmlWebpackPlugin({ title: options.title, filename: "pricing.html", template: "./src/pricing.html", meta: options.meta, minify: false, }),
+    new HtmlWebpackPlugin({ title: options.title, filename: "features.html", template: "./src/features.html", meta: options.meta, minify: false, }),
+    new HtmlWebpackPlugin({ title: options.title, filename: "blog.html", template: "./src/blog.html", meta: options.meta, minify: false, }),
+    new HtmlWebpackPlugin({ title: options.title, filename: "article.html", template: "./src/article.html", meta: options.meta, minify: false, }),
+    new HtmlWebpackPlugin({ title: options.title, filename: "team.html", template: "./src/team.html", meta: options.meta, minify: false, }),
+    new HtmlWebpackPlugin({ title: options.title, filename: "faq.html", template: "./src/faq.html", meta: options.meta, minify: false, }),
+    new HtmlWebpackPlugin({ title: options.title, filename: "technical.html", template: "./src/technical.html", meta: options.meta, minify: false, }),
+    new HtmlWebpackPlugin({ title: options.title, filename: "help.html", template: "./src/help.html", meta: options.meta, minify: false, }),
+    new HtmlWebpackPlugin({ title: options.title, filename: "help2.html", template: "./src/help2.html", meta: options.meta, minify: false, }),
+    new HtmlWebpackPlugin({ title: options.title, filename: "conditions.html", template: "./src/conditions.html", meta: options.meta, minify: false, }),
+    new HtmlWebpackPlugin({ title: options.title, filename: "privacy.html", template: "./src/privacy.html", meta: options.meta, minify: false, }),
     new FaviconsWebpackPlugin({
       logo: "./src/favicons/favicon.png",
       favicons: {
