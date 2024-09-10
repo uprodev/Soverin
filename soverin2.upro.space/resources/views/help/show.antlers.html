@@ -5,6 +5,8 @@
         <div class="content">
             {{ partial:help/nav }}
 
+
+
             <div class="help-content">
                 <div class="account">
                     <div class="title">
@@ -16,7 +18,7 @@
                           </li>
 
                             <li>
-                                <a href="{{ category_help:0:url }}">{{ category_help:0:title }}</a>
+                                <a href="/category-help/{{ category_help:0:slug }}">{{ category_help:0:title }}</a>
                                 <span><i class="fa-solid fa-chevron-right"></i></span>
                             </li>
 
@@ -49,7 +51,7 @@
                       {{ /content }}
 
                         <div class="btn-wrap">
-                            <a href="{{ category_help:0:url }}" class="btn-default">{{ trans:strings.go_back }}</a>
+                            <a href="/category-help/{{ category_help:0:slug }}" class="btn-default">{{ trans:strings.go_back }}</a>
                         </div>
                     </div>
 
