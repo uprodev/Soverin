@@ -115,4 +115,17 @@
   .home-banner h1 {
     font-size: 40px;
   }
+  .home-banner{
+    height: calc(100vh - 75px);
+    padding-bottom: 50px;
+  }
+  .home-banner.pb-245{
+    padding-bottom: 100px;
+  }
+  .home-banner.pb-245 .scroll{
+    bottom: 120px;
+  }
+  .home-banner .scroll{
+    bottom: 120px;
+  }
 }

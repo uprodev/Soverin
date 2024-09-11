@@ -51,7 +51,9 @@ header{
       }
     }
   }
-
+  .btn-border{
+    background: #fff;
+  }
 }
 .top-menu{
   display: flex;
@@ -106,8 +108,8 @@ header{
   }
   .sub-menu{
     background-color: white;
-    border-radius: 3px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.13);
+    border-radius: 6px;
+    box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.20);
     box-sizing: border-box;
     margin-top: 4px;
     opacity: 0;

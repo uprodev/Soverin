@@ -389,7 +389,8 @@
 
 @media (max-width:575px) {
   .form-email .input-wrap{
-    width: 100%;
+    width: 50%;
+    border-radius: 0;
   }
   .form-email .input-wrap + .input-wrap:before{
     left: 5px;
@@ -412,5 +413,9 @@
   }
   .form-search .btn{
     top: 0;
+  }
+  .form-email .input-wrap input{
+    font-size: 15px;
+    padding: 0;
   }
 }

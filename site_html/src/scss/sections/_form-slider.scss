@@ -1,15 +1,22 @@
 .form-slider{
   padding: 120px 0 0;
   background: $yellow;
-  overflow: hidden;
+
   .content{
-    display: flex;
+    /*display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap;*/
+    &:after {
+      content: "";
+      display: table;
+      clear: both;}
   }
   .form-wrap{
     width: 48%;
     padding-top: 5px;
+    display: inline-block;
+    float: left;
+    padding-bottom: 30px;
   }
   .h2{
     text-align: left;
@@ -18,7 +25,8 @@
   }
   .slider-wrap{
     width: 470px;
-    height: 595px;
+    display: inline-block;
+    float: right;
   }
   .swiper-slide{
     width: 100%;
@@ -67,10 +75,13 @@
       align-items: flex-end;
     }
   }
+
+
 }
 
 .info-slider{
   overflow: visible;
+  height: fit-content;
 }
 
 @media (max-width: 1440px) {

@@ -329,4 +329,10 @@ footer .footer-menu-wrap .item{
   footer .footer-menu-wrap .item h5 a:hover {
     opacity: 1;
   }
+  footer .footer-menu-wrap{
+    grid-gap: 10px;
+  }
+  footer .bottom{
+    margin-top: 25px;
+  }
 }
