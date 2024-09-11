@@ -1,0 +1,50 @@
+<section class="slider-people-wrap slider-people-wrap-bg-blue">
+  <div class="bg"></div>
+  <div class="content-width">
+    <div class="title-wrap">
+      <div class="title">
+        <h2 class="h2">{{ title }}</h2>
+      </div>
+      <div class="wrap">
+        <div class="swiper-pagination people-pagination-2"></div>
+        <div class="nav-wrap">
+          <div class="swiper-button-next next-people-2 btn"><img src="/public/dist/images/icon-10.svg" alt=""></div>
+          <div class="swiper-button-prev prev-people-2 btn btn-revers"><img src="/public/dist/images/icon-10.svg" alt=""></div>
+        </div>
+      </div>
+      <div class="text-wrap">
+        <p>{{ text }} </p>
+      </div>
+    </div>
+    <div class="slider-wrap">
+      <div class="swiper slider-people-2">
+        <div class="swiper-wrapper">
+          {{ collection:team }}
+            <div class="swiper-slide">
+              <figure>
+                <img src="{{ member_photo:url }}" alt="{{ title }}">
+              </figure>
+              <div class="text-wrap-slide">
+                <div class="text-title-wrap">
+                  <div class="info-wrap">
+                    <h6>{{ title }}</h6>
+                    {{ if position }}
+                      <p class="info">{{ position }}</p>
+                    {{ /if }}
+                  </div>
+                  {{ content }}
+                  {{ if linkedin_url }}
+                    <div class="link-wrap">
+                      <a href="{{ linkedin_url }}" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                  {{ /if }}
+                </div>
+
+              </div>
+            </div>
+          {{ /collection:team }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
