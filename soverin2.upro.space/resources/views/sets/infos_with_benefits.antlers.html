@@ -1,50 +1,34 @@
 <div class="bg-white-blue">
   <section class="email-solution email-solution-5">
     <div class="bg">
-      <img src="images/img-17.svg" alt="">
+      <img src="{{ background:url }}" alt="">
     </div>
     <div class="content-width">
       <figure>
-        <img src="images/img-17.svg" alt="">
+        <img src="{{ image:url }}" alt="">
       </figure>
       <div class="text">
-        <h2 class="h2">Soverin: Your strategic email ally</h2>
-        <h4>The beast that is email.</h4>
-        <h5>We don’t let our partners stand alone on the battlefield.</h5>
-        <p>Your wins are our wins. If your end users are happy, you are happy, and that makes us happy. We do the hard work while you reap the benefits of partnering with us. We do everything in our hands to mitigate risks while keeping things running smoothly. </p>
-        <h5>There are many benefits to joining forces: </h5>
-        <p>From offering your customers a scalable, user-friendly, secure email service that they will love and won't break the bank to working together with us to accelerate business and keep it growing. You and your end users can focus on your core business while we focus on what we do best:
-          <a href="#">EMAIL</a>.</p>
-
+        <h2 class="h2">{{ title }}</h2>
+        <p>{{ description }} </p>
       </div>
     </div>
   </section>
 
   <section class="item-3x item-3x-no-border pb-80">
     <div class="content-width">
-      <h2 class="h2">With Soverin, everybody wins</h2>
+      <h2 class="h2">{{ title }}</h2>
       <div class="content">
+        {{ benefits_list }}
         <div class="item">
-          <a href="#">
-            <h3 class="h3">Visionary Solution</h3>
-            <p>You can offer an email service that adapts to your customers' needs.</p>
+          <a href="{{ link_field }}">
+            <h3 class="h3">{{ title_benefits }}</h3>
+            <p>{{ description_benefits }}</p>
           </a>
         </div>
-        <div class="item">
-          <a href="#">
-            <h3 class="h3">Strategic Collaboration</h3>
-            <p>We onboard, host, and maintain accounts and facilitate upselling.</p>
-          </a>
-        </div>
-        <div class="item">
-          <a href="#">
-            <h3 class="h3">Mutual Success</h3>
-            <p>Our partnership ensures success for both parties.</p>
-          </a>
-        </div>
+        {{ /benefits_list }}
       </div>
       <div class="btn-wrap">
-        <a href="#" class="btn-border"><span>Learn more</span></a>
+        <a href="{{ button:url }}" class="btn-border"><span>{{ button:title }}</span></a>
       </div>
     </div>
   </section>
