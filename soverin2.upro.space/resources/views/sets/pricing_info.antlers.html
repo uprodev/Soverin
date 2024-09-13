@@ -1,0 +1,24 @@
+<section class="pricing-info">
+  <div class="content-width">
+    <div class="content">
+      <h2 class="h2">{{ title }}</h2>
+
+      {{ text }}
+
+      {{ if pricing_list }}
+        <div class="wrap">
+          {{ pricing_list }}
+            <div class="item item-{{ index + 1 }}">
+              {{ if label }}
+              <p class="small-label">{{ label }}</p>
+              {{ /if }}
+              <h6>{{ title }}</h6>
+              <h3 class="title"><sup>{{ currency }} </sup>{{ value }} <sub>{{ period }}</sub></h3>
+              <p>{{ text }}</p>
+            </div>
+          {{ /pricing_list }}
+        </div>
+      {{ /if }}
+    </div>
+  </div>
+</section>
