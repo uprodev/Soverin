@@ -1,0 +1,27 @@
+<section class="pricing-banner banner-h1">
+  <div class="content-width">
+    <div class="content">
+      <div class="text">
+        <h1>{{ title }}</h1>
+        <h6 class="text-up">{{ title }}</h6>
+        <p>{{ description }}</p>
+        {{ if list}}
+          <ul class="list-icon">
+            {{ list }}
+            <li>
+              <img src="public/dist/images/icon-5.svg" alt="">
+              {{item}}
+            </li>
+            {{ /list }}
+          </ul>
+        {{ /if }}
+        <div class="btn-wrap">
+          <a href="{{  link_url }}" class="btn-border"><span>{{  link_name }}</span></a>
+        </div>
+      </div>
+      <figure>
+        <img src="{{ image:url }}" alt="">
+      </figure>
+    </div>
+  </div>
+</section>
