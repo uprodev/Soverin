@@ -1,0 +1,33 @@
+<section class="features-info{{ if background }} features-info-bg{{ /if }}">
+  {{ if background }}
+    <div class="bg"></div>
+  {{ /if }}
+  <div class="content-width">
+    <div class="content">
+      {{ if title or text }}
+        <div class="title">
+          {{ if title }}
+            <h2 class="h2">{{ title }}</h2>
+          {{ /if }}
+
+          {{ if text }}
+            {{ text }}
+          {{ /if }}
+        </div>
+      {{ /if }}
+      {{ features }}
+        <div class="item">
+          <a href="{{ link }}">
+            <figure>
+              <img src="{{ icon:url }}" alt="">
+            </figure>
+            <div class="text">
+              <h3 class="h3">{{ title }}</h3>
+              {{ info }}
+            </div>
+          </a>
+        </div>
+      {{ /features }}
+    </div>
+  </div>
+</section>
