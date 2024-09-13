@@ -1,8 +1,10 @@
-<section class="banner-help privacy-banner">
+<section class="banner-help{{ if !image }} privacy-banner{{ /if }}">
   <div class="content-width">
     <div class="content">
       <div class="bg">
-
+        {{ if image }}
+          <img src="{{ image:url }}" alt="">
+        {{ /if }}
       </div>
       <div class="wrap">
         <h1>{{ title}}</h1>
