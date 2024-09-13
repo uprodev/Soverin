@@ -1,0 +1,19 @@
+<section class="customize-email">
+  <div class="bg"></div>
+  <div class="content-width">
+    <div class="content">
+      <h2 class="h2">{{ title }}</h2>
+      <p>{{ subtitle }}</p>
+      {{ if customizes }}
+        <ul>
+          {{ customizes }}
+            <li>
+              <h6 class="text-up"><img src="public/dist/images/icon-5.svg" alt="">{{ title }}</h6>
+              <p>{{ text }}</p>
+            </li>
+          {{ /customizes }}
+        </ul>
+      {{ /if }}
+    </div>
+  </div>
+</section>
