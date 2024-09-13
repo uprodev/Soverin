@@ -14,3 +14,11 @@
     </div>
   </div>
 </section>
+
+{{ if image_right}}
+  <section class="img-big-wrap">
+    <div class="content-width">
+      <img src="{{ image_right:url }}" alt="">
+    </div>
+  </section>
+{{ /if }}
