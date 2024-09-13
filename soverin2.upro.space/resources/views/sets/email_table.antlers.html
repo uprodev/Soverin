@@ -1,0 +1,31 @@
+<section class="free-email-table">
+  <div class="content-width">
+    <div class="title">
+      <div class="title-wrap">
+        <h2 class="h2">{{ title }}</h2>
+        <p>{{ text }}</p>
+      </div>
+      <figure>
+        <img src="{{ image:url }}" alt="">
+      </figure>
+    </div>
+    <div class="table">
+      <div class="table-row table-head">
+        <div class="data data-1">{{ head_column_1 }}</div>
+        <div class="data data-2">{{ head_column_2 }}</div>
+        <div class="data data-2">{{ head_column_3 }}</div>
+      </div>
+
+      {{ table }}
+
+        <div class="table-row">
+          <div class="data data-1">{{ column_1 }}</div>
+          <div class="data data-2">{{ if column_2 }} <img src="public/dist/images/icon-7.svg" alt=""> {{ else }} Does not provide {{ /if }}</div>
+          <div class="data data-2">{{ if column_3 }} <img src="public/dist/images/icon-7.svg" alt=""> {{ else }} Does not provide {{ /if }}</div>
+        </div>
+
+      {{ /table }}
+
+    </div>
+  </div>
+</section>
