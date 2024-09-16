@@ -1,0 +1,53 @@
+<div class="bg-white-blue">
+  <section class="title-img-email title-img-email-3" id="s1">
+    <div class="bg">
+      <img src="{{ image:url }}" alt="">
+    </div>
+    <div class="content-width">
+      <div class="content">
+        <h2 class="title-up">{{ title }}
+          <span>{{ subtitle }}</span></h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="email-solution email-solution-6">
+    <div class="bg">
+      <img src="{{ smb_background:url }}" alt="">
+    </div>
+    <div class="content-width">
+      <figure>
+        <img src="{{ smb_image:url }}" alt="">
+      </figure>
+      <div class="text">
+        <h2 class="h2">{{ smb_title }}</h2>
+        {{ smb_text }}
+      </div>
+    </div>
+  </section>
+
+  <section class="item-3x-animations item-3x-animations-1">
+    <div class="content-width">
+      <h2 class="h2">{{ smb_mails_title }}</h2>
+      <div class="btn-wrap">
+        <a href="{{ smb_mails_link:url }}" class="btn-default">Learn more</a>
+      </div>
+      {{ if smb_mails }}
+        <div class="content">
+          {{ smb_mails }}
+            <div class="item item-{{ index+1 }}">
+              <div class="hover">
+                <div class="bg-item"></div>
+                <div class="wrap">
+                  <h3 class="h3">{{ title }}</h3>
+                  <p>{{ text }}</p>
+                </div>
+              </div>
+            </div>
+          {{ /smb_mails }}
+        </div>
+      {{ /if }}
+    </div>
+  </section>
+
+</div>
