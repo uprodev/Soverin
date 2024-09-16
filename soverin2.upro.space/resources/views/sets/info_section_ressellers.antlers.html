@@ -1,0 +1,62 @@
+<div class="bg-white-blue">
+  <section class="img-text">
+    <div class="content-width">
+      <div class="content">
+        <figure>
+          <img src="{{ image:url }}" alt="">
+        </figure>
+        <div class="text">
+          <h2 class="h2">{{ title }}</h2>
+          <h4>{{ subtitle }}</h4>
+
+          {{ if list }}
+            <ul class="list-icon">
+              {{ list }}
+                <li>
+                  <img src="public/dist/images/icon-5.svg" alt="">
+                  {{ item }}
+                </li>
+              {{ /list }}
+            </ul>
+          {{ /if }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="email-solution email-solution-10">
+    <div class="bg">
+      <img src="{{ solution_background:url }}" alt="">
+    </div>
+    <div class="content-width">
+      <figure>
+        <img src="{{ solution_image:url }}" alt="">
+      </figure>
+      <div class="text">
+        <div class="title">
+          <h2 class="h2">{{ solution_title }}</h2>
+        </div>
+
+        {{ if solution_list }}
+          <ol>
+            {{ solution_list }}
+              <li>
+                <h6>{{ title }}</h6>
+                <p>{{ text_field }}</p>
+              </li>
+            {{ /solution_list }}
+          </ol>
+        {{ /if }}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-title-text bg-title-text-white">
+    <div class="content-width">
+      <div class="content">
+        <h2 class="h2">{{ bottom_title }}</h2>
+        <p>{{ bottom_text }}</p>
+      </div>
+    </div>
+  </section>
+</div>
