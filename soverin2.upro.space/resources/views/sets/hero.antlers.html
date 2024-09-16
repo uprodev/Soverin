@@ -1,11 +1,11 @@
-<section class="home-banner">
+<section class="home-banner{{ if white_color_style}} bg-section-white{{ /if }}">
   <div class="bg"></div>
   <div class="content-width">
     <div class="content">
-      <figure><img src="/public/dist/images/logo-red.svg" alt=""></figure>
+      <figure><img src="/public/dist/images/logo-{{ if white_color_style}}dark{{else}}red{{ /if }}.svg" alt=""></figure>
       <h1>{{ title }}</h1>
-      <h6 class="text-up">{{ subtitle }} {{ link }}</h6>
-      <div class="btn-wrap"><a href="#" class="btn-border"><span>Get started</span></a></div>
+      <h6 class="text-up">{{ subtitle }} </h6>
+      <div class="btn-wrap"><a href="{{ link }}" class="btn-border"><span>Get started</span></a></div>
     </div>
   </div>
   <div class="scroll"><a href="#s1"><img src="/public/dist/images/icon-2.svg" alt="">Scroll to Learn More</a></div>
