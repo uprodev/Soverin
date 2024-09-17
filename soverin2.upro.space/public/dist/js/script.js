@@ -75,5 +75,70 @@ jQuery(document).ready(function($){
     }
   });
 
+  //calculator
+
+    function updatePrice($counter) {
+        let pricePerItem = parseFloat($counter.attr('data-price'));
+        let quantity = parseInt($counter.find('.quantity').val());
+        let price = quantity * pricePerItem;
+
+
+
+        if (price === 0) {
+            $counter.find('.total p').text('€  хх,xх');
+        } else {
+            $counter.find('.total p').text('€  ' + price + ',00');
+        }
+    }
+
+    function updateTotalPrice() {
+        let total = 0;
+        $('.input-wrap').each(function () {
+            let quantity = parseInt($(this).find('.quantity').val());
+            let pricePerItem = parseFloat($(this).attr('data-price'));
+
+            total += quantity * pricePerItem;
+
+        });
+        $('.total-text p').text('€ ' + total + ',00');
+        $('#total_price').val('€ ' + total + ',00');
+    }
+
+    $(document).on('change', '[name="radio_field"]', function(){
+        let domen = $(this).val();
+        let price_domen = $(this).attr('data-domen');
+
+        $('.dmn').text(domen);
+        $('.wrap-domen').attr('data-price', price_domen);
+        let $counter = $(this).closest('.input-wrap');
+
+        updatePrice($counter);
+        updateTotalPrice();
+    });
+
+    $('.btn-count-plus').click(function () {
+        let $counter = $(this).closest('.input-wrap');
+        let $quantity = $counter.find('.quantity');
+        let value = parseInt($quantity.val());
+
+        $quantity.val(value + 1);
+        $counter.find('.quantity_counts').val(value + 1);
+        updatePrice($counter);
+        updateTotalPrice();
+    });
+
+    $('.btn-count-minus').click(function () {
+        let $counter = $(this).closest('.input-wrap');
+        let $quantity = $counter.find('.quantity');
+        let value = parseInt($quantity.val());
+
+        if (value > 0) {
+            $quantity.val(value - 1);
+            $counter.find('.quantity_counts').val(value - 1);
+        }
+
+        updatePrice($counter);
+        updateTotalPrice();
+    });
 
 })

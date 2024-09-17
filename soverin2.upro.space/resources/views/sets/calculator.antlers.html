@@ -11,109 +11,126 @@
                     <a href="{{ link_url }}" class="btn-default">{{ link_name }}</a>
                 </div>
             </div>
-            <form action="#" class="calculate-form">
+            {{ form:calculator class="calculate-form" }}
                 <div class="tabs-css">
-                    <ul class="tabs-menu-form">
-                        <li>
-                            <input type="radio" name="radio" id="radio-1" checked>
-                            <label for="radio-1">.NL</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="radio" id="radio-2" >
-                            <label for="radio-2">.COM</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="radio" id="radio-3" >
-                            <label for="radio-3">.EU</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="radio" id="radio-4" >
-                            <label for="radio-4">.NET</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="radio" id="radio-5" >
-                            <label for="radio-5">.ORG</label>
-                        </li>
-                    </ul>
-
-
-
-                    <div class="tab-content">
-                        <div class="tab-item tab-item-1">
-
-                            <div class="input-wrap">
-                                <div class="input-number ">
-                                    <div class="btn-count btn-count-minus"><i class="fa fa-minus"></i></div>
-                                    <input type="text" name="count" value="1" class="form-control"/>
-                                    <div class="btn-count btn-count-plus"><i class="fa fa-plus"></i></div>
-                                </div>
-                                <div class="text">
-                                    <p>MOVE .NL DOMAIN TO SOVERIN</p>
-                                </div>
-                                <div class="total">
-                                    <p>€ 15,00</p>
-                                </div>
-                            </div>
-                            <div class="input-wrap">
-                                <div class="input-number ">
-                                    <div class="btn-count btn-count-minus"><i class="fa fa-minus"></i></div>
-                                    <input type="text" name="count" value="2" class="form-control"/>
-                                    <div class="btn-count btn-count-plus"><i class="fa fa-plus"></i></div>
-                                </div>
-                                <div class="text">
-                                    <p>new .nl domAin</p>
-                                </div>
-                                <div class="total">
-                                    <p>€ 30,00</p>
-                                </div>
-                            </div>
-                            <div class="input-wrap">
-                                <div class="input-number ">
-                                    <div class="btn-count btn-count-minus"><i class="fa fa-minus"></i></div>
-                                    <input type="text" name="count" value="1" class="form-control"/>
-                                    <div class="btn-count btn-count-plus"><i class="fa fa-plus"></i></div>
-                                </div>
-                                <div class="text">
-                                    <p>MAilboxes</p>
-                                </div>
-                                <div class="total">
-                                    <p>€ 60,00</p>
-                                </div>
-                            </div>
-                            <div class="input-wrap">
-                                <div class="input-number ">
-                                    <div class="btn-count btn-count-minus"><i class="fa fa-minus"></i></div>
-                                    <input type="text" name="count" value="1" class="form-control"/>
-                                    <div class="btn-count btn-count-plus"><i class="fa fa-plus"></i></div>
-                                </div>
-                                <div class="text">
-                                    <p>25  GB Space</p>
-                                </div>
-                                <div class="total">
-                                    <p>€ xx,xx</p>
-                                </div>
-                            </div>
-                            <div class="text-info">
-                                <p>send my calculations</p>
-                                <p>TOTAL PRICE</p>
-                            </div>
-                            <div class="input-wrap-total">
-                                <div class="email-wrap">
-                                    <label for="email-1"></label>
-                                    <input type="email" name="email-1" id="email-1" placeholder="EMAIL">
-                                    <button type="submit" class="btn">
-                                        <img src="images/icon-6.svg" alt="">
-                                    </button>
-                                </div>
-                                <div class="total-text">
-                                    <p>€ 95,00</p>
-                                </div>
-                            </div>
-
+                    {{ if success }}
+                        <div class="bg-green-300 text-white p-2">
+                            {{ success }}
                         </div>
-                    </div>
+                    {{ else }}
+
+                        {{ if errors }}
+                            <div class="bg-red-300 text-white p-2">
+                                {{ errors }}
+                                {{ value }}<br>
+                                {{ /errors }}
+                            </div>
+                        {{ /if }}
+                        <ul class="tabs-menu-form">
+                            <li>
+                                <input type="radio" value=".NL" name="radio_field" id="radio-1" data-domen="13" checked>
+                                <label for="radio-1">.NL</label>
+                            </li>
+                            <li>
+                                <input type="radio" value=".COM" name="radio_field" id="radio-2" data-domen="18" >
+                                <label for="radio-2">.COM</label>
+                            </li>
+                            <li>
+                                <input type="radio" value=".EU" name="radio_field" id="radio-3" data-domen="13" >
+                                <label for="radio-3">.EU</label>
+                            </li>
+                            <li>
+                                <input type="radio" value=".NET" name="radio_field" id="radio-4" data-domen="18" >
+                                <label for="radio-4">.NET</label>
+                            </li>
+                            <li>
+                                <input type="radio" value=".ORG" name="radio_field" id="radio-5" data-domen="23" >
+                                <label for="radio-5">.ORG</label>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div class="tab-item tab-item-1">
+
+                                <div class="input-wrap wrap-domen" data-price="13">
+                                    <div class="input-number">
+                                        <div class="btn-count btn-count-minus"><i class="fa fa-minus"></i></div>
+                                        <input type="text" name="count" value="1" class="form-control quantity"/>
+                                        <div class="btn-count btn-count-plus"><i class="fa fa-plus"></i></div>
+                                    </div>
+                                    <div class="text">
+                                        <p>MOVE <span class="dmn">.NL</span> DOMAIN TO SOVERIN</p>
+                                    </div>
+                                    <div class="total">
+                                        <p>€ 13,00</p>
+                                    </div>
+                                    <input type="hidden" value="1" name="count_move_domain_to_soverin" class="quantity_counts">
+                                </div>
+                                <div class="input-wrap wrap-domen" data-price="13">
+                                    <div class="input-number">
+                                        <div class="btn-count btn-count-minus"><i class="fa fa-minus"></i></div>
+                                        <input type="text" name="count" value="1" class="form-control quantity"/>
+                                        <div class="btn-count btn-count-plus"><i class="fa fa-plus"></i></div>
+                                    </div>
+                                    <div class="text">
+                                        <p>new <span class="dmn">.nl</span> domAin</p>
+                                    </div>
+                                    <div class="total">
+                                        <p>€ 13,00</p>
+                                    </div>
+                                    <input type="hidden" value="1" name="count_new_domain" class="quantity_counts">
+                                </div>
+                                <div class="input-wrap" data-price="10">
+                                    <div class="input-number">
+                                        <div class="btn-count btn-count-minus"><i class="fa fa-minus"></i></div>
+                                        <input type="text" name="count" value="1" class="form-control quantity"/>
+                                        <div class="btn-count btn-count-plus"><i class="fa fa-plus"></i></div>
+                                    </div>
+                                    <div class="text">
+                                        <p>MAilboxes</p>
+                                    </div>
+                                    <div class="total">
+                                        <p>€ 10,00</p>
+                                    </div>
+                                    <input type="hidden" value="1" name="count_mailboxes" class="quantity_counts">
+                                </div>
+                                <div class="input-wrap" data-price="29">
+                                    <div class="input-number">
+                                        <div class="btn-count btn-count-minus"><i class="fa fa-minus"></i></div>
+                                        <input type="text" name="count" value="1" class="form-control quantity"/>
+                                        <div class="btn-count btn-count-plus"><i class="fa fa-plus"></i></div>
+                                    </div>
+                                    <div class="text">
+                                        <p>25  GB Space</p>
+                                    </div>
+                                    <div class="total">
+                                        <p>€ 29,00</p>
+                                    </div>
+                                    <input type="hidden" value="1" name="count_25_gb_space" class="quantity_counts">
+                                </div>
+                                <div class="text-info">
+                                    <p>send my calculations</p>
+                                    <p>TOTAL PRICE</p>
+                                </div>
+                                <div class="input-wrap-total">
+                                    <div class="email-wrap">
+                                        <label for="email"></label>
+                                        <input type="email" name="email" id="email" placeholder="EMAIL">
+                                        <button type="submit" class="btn">
+                                            <img src="public/dist/images/icon-6.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <div class="total-text">
+                                        <p>€ 65,00</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    <input type="hidden" name="total_price" id="total_price">
+                    {{ /if}}
                 </div>
-            </form>
+            {{ /form:calculator }}
         </div>
     </div>
 </section>

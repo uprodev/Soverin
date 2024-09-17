@@ -20175,13 +20175,13 @@ $(document).ready(function () {
   });
 
   // +/-
-  $(".btn-count-plus").click(function () {
-    var e = $(this).parent().find("input");
-    return e.val(parseInt(e.val()) + 1), e.change(), !1
-  }), $(".btn-count-minus").click(function () {
-    var e = $(this).parent().find("input"), t = parseInt(e.val()) - 1;
-    return t = t < 1 ? 1 : t, e.val(t), e.change(), !1
-  })
+  // $(".btn-count-plus").click(function () {
+  //   var e = $(this).parent().find("input");
+  //   return e.val(parseInt(e.val()) + 1), e.change(), !1
+  // }), $(".btn-count-minus").click(function () {
+  //   var e = $(this).parent().find("input"), t = parseInt(e.val()) - 1;
+  //   return t = t < 1 ? 1 : t, e.val(t), e.change(), !1
+  // })
 
   $('.blog .item p').dotdotdot({
     height: 50
