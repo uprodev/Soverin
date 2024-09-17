@@ -1,0 +1,38 @@
+<div class="bg-white-blue z-10 brt-48 mt-35 ">
+  <section class="email-solution email-solution-9">
+    <div class="bg">
+      <img src="{{ background:url }}" alt="">
+    </div>
+    <div class="content-width">
+      <figure>
+        <img src="{{ image:url }}" alt="">
+      </figure>
+      <div class="text">
+        <h2 class="h2">{{ title }}</h2>
+        {{ text }}
+      </div>
+    </div>
+  </section>
+
+  <section class="item-3x">
+    <div class="content-width">
+      <h2 class="h2">{{ benefits_title }}</h2>
+
+      {{ if benefits_list }}
+        <div class="content">
+          {{ benefits_list }}
+            <div class="item">
+              <a href="{{ link:url }}">
+                <h3 class="h3">{{ title }}</h3>
+                <p>{{ text }}</p>
+              </a>
+            </div>
+          {{ /benefits_list }}
+        </div>
+      {{ /if }}
+      <div class="btn-wrap">
+        <a href="{{ link_url:url }}" class="btn-border"><span>{{ link_name }}</span></a>
+      </div>
+    </div>
+  </section>
+</div>
