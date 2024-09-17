@@ -87,7 +87,17 @@
 }
 @media (max-width: 1440px) {
   .home-banner h1{
-    font-size: 80px;
+    font-size: 70px;
+  }
+  .home-banner figure{
+    margin-bottom: 30px;
+  }
+  .home-banner .content{
+    width: 900px;
+  }
+  .home-banner{
+    padding: 80px 0  140px;
+    min-height: calc(100vh - 83px);
   }
 }
 
