@@ -1,17 +1,20 @@
-<div class="bg-white-blue">
-  <section class="title-img-email title-img-email-3" id="s1">
-    <div class="bg">
-      <img src="{{ image:url }}" alt="">
-    </div>
-    <div class="content-width">
-      <div class="content">
-        <h2 class="title-up">{{ title }}
-          <span>{{ subtitle }}</span></h2>
-      </div>
-    </div>
-  </section>
+<div class="bg-{{ if color_style }}yellow-wrap{{ else }}white-blue{{ /if }}">
 
-  <section class="email-solution email-solution-6">
+  {{ if !color_style }}
+    <section class="title-img-email title-img-email-3" id="s1">
+      <div class="bg">
+        <img src="{{ image:url }}" alt="">
+      </div>
+      <div class="content-width">
+        <div class="content">
+          <h2 class="title-up">{{ title }}
+            <span>{{ subtitle }}</span></h2>
+        </div>
+      </div>
+    </section>
+  {{ /if }}
+
+  <section class="email-solution email-solution-{{ if color_style }}8{{ else }}6{{ /if }}">
     <div class="bg">
       <img src="{{ smb_background:url }}" alt="">
     </div>
@@ -26,11 +29,11 @@
     </div>
   </section>
 
-  <section class="item-3x-animations item-3x-animations-1">
+  <section class="item-3x-animations item-3x-animations-{{ if color_style }}2{{ else }}1{{ /if }}">
     <div class="content-width">
       <h2 class="h2">{{ smb_mails_title }}</h2>
       <div class="btn-wrap">
-        <a href="{{ smb_mails_link:url }}" class="btn-default">Learn more</a>
+        <a href="{{ smb_mails_link:url }}" class="btn-default{{ if color_style }} bg-blue{{ /if }}">Learn more</a>
       </div>
       {{ if smb_mails }}
         <div class="content">
