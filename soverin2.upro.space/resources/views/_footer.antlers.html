@@ -1,57 +1,60 @@
 <footer class="footer">
   <div class="bg">
-    <img src="/public/dist/images/big-logo-footer.png" alt="" class="img img-1"> <img src="images/after-1.png" alt=""
-                                                                                       class="img img-2"></div>
+    <img src="/public/dist/images/big-logo-footer.png" alt="" class="img img-1"> <img src="/public/dist/images/after-1.png" alt="" class="img img-2"></div>
   <div class="content-width">
     <div class="logo-wrap">
-      <div class="logo"><a href="#">
-        <img src="{{ options:logo:0:url }}" alt=""></a></div>
+      <div class="logo"><a href="/">
+        <img src="{{ options:footer_logo:url }}" alt=""></a></div>
       <p>{{ options:text_footer }}</p>
-      <ul class="soc">
-        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-        <li><a href="#"><i class="fa-light fa-envelope"></i></a></li>
-      </ul>
+
+      {{ if options:social }}
+        <ul class="soc">
+          {{ options:social }}
+            <li><a href="{{ link:url }}" target="_blank"><i class="{{ fontawesom_class }}"></i></a></li>
+          {{ /options:social }}
+        </ul>
+      {{ /if }}
     </div>
     <nav class="footer-menu-wrap">
-      <div class="item item-1"><h5>Solutions</h5>
-        <div class="mob"><h6><a href="#">For Business</a></h6>
+      <div class="item item-1"><h5>{{ options:title_menu_1 }}</h5>
+        <div class="mob">
+          <h6><a href="#">For Business</a></h6>
           <ul class="border-list">
             {{ nav handle="footer_solutions" }}
               <li><a href="{{ url }}" >{{ title }}</a></li>
             {{ /nav }}
           </ul>
-          <h6>For Consumers</h6></div>
+          <h6><a href="">For Consumers</a></h6>
+        </div>
       </div>
-      <div class="item item-2"><h5><a href="#">About</a></h5>
+      <div class="item item-2"><h5>{{ options:title_menu_2 }}</h5>
         <div class="mob">
           <ul>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Status</a></li>
+            {{ nav handle="footer_about" }}
+              <li><a href="{{ url }}" >{{ title }}</a></li>
+            {{ /nav }}
           </ul>
         </div>
       </div>
-      <div class="item item-3"><h5><a href="#">Resources</a></h5>
+      <div class="item item-3"><h5>{{ options:title_menu_3 }}</h5>
         <div class="mob">
           <ul>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Status</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact Support</a></li>
+            {{ nav handle="footer_resources" }}
+              <li><a href="{{ url }}" >{{ title }}</a></li>
+            {{ /nav }}
           </ul>
         </div>
       </div>
-      <div class="item item-4"><h5><a href="#">Product</a></h5>
+      <div class="item item-4"><h5>{{ options:title_menu_4 }}</h5>
         <div class="mob">
           <ul>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Technical specs</a></li>
-            <li><a href="#">Pricing</a></li>
+            {{ nav handle="footer_product" }}
+              <li><a href="{{ url }}" >{{ title }}</a></li>
+            {{ /nav }}
           </ul>
         </div>
       </div>
-      <div class="item item-5"><h5><a href="#">Language</a></h5>
+      <div class="item item-5"><h5>{{ options:title_languages }}</h5>
         <div class="mob">
           <ul>
             {{ locales }}
