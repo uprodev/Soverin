@@ -58,11 +58,10 @@
         <div class="mob">
           <ul>
             {{ locales }}
-              <li><a href="{{ permalink }}">View in {{ locale:name }}</a></li>
+              <li><a href="{{ permalink }}"><img src="/public/dist/images/flag-{{ index+1}}.png" alt="">{{ locale:name }}</a></li>
             {{ /locales }}
 
-            <li><a href="#"><img src="/public/dist/images/flag-1.png" alt="">Nederlands</a></li>
-            <li><a href="#"><img src="/public/dist/images/flag-2.png" alt="">English</a></li>
+
           </ul>
         </div>
       </div>
