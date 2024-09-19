@@ -12,5 +12,10 @@
     </ul>
     <h4 class="title"><a href="{{ url }}">{{ title }}</a></h4>
     <p>{{ excerpt }}</p></div>
+    {{ if class=="item-big" }}
+      <div class="btn-wrap">
+        <a href="{{ url }}" class="btn-default">{{ trans:strings.read }}</a>
+      </div>
+    {{ /if }}
 </div>
 
