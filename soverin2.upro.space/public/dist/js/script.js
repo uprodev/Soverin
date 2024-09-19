@@ -5,29 +5,27 @@ jQuery(document).ready(function($){
         $.ajaxSetup({
             headers: { 'X-CSRF-TOKEN': $('input[name="_token"]').val() }
         });
-        var form = $('.formCta');
-        form.submit(function(e) {
-            e.preventDefault();
 
-            $.ajax({
-              url: form.attr('action'),
-              data: form.serialize()
-            })
-                .done(function(response) {
-                   $('.submitResult').html('Done')
-                  console.log(response)
-                })
+  var forms = document.querySelector('.formCta');
 
-                .fail(function() {
-                    console.log('boo')
-                });
+  if (forms.length > 0) {
+    var form = forms
+  }
+  window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+  //form = document.getElementById('form');
 
-            return false;
-        });
+// On submit...
+  axios.post(form.action, new FormData(form))
+    .then(response => {
+      console.log(response.data)
+    });
+
+
+
 
 
         //content
-
+  if ($('.content-area')) {
     var $menu = $('.article-menu');
     var $contentArea = $('.content-area');
     var headingIndex = 1;
@@ -43,7 +41,7 @@ jQuery(document).ready(function($){
         $menu.append($menuItem);
         headingIndex++;
     });
-
+  }
 
   //filter
 
