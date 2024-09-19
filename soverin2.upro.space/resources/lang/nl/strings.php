@@ -27,5 +27,6 @@ return [
     'saying' => 'Wat zeggen mensen',
     'business' => 'Voor Bedrijven',
     'consumers' => 'Voor Consumenten',
+    'read' => 'Lees artikel',
 ];
 

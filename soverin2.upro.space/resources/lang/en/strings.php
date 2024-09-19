@@ -27,4 +27,5 @@ return [
     'saying' => 'What are people saying',
     'business' => 'For Business',
     'consumers' => 'For Consumers',
+    'read' => 'Read article',
 ];
