@@ -12,13 +12,24 @@ jQuery(document).ready(function($){
 
   $('.formCta').submit(function(e){
     e.preventDefault();
+
+
     var that = $(this);
+
+    let success = that.find('.submitResult').attr('data-success');
+    let err = that.find('.submitResult').attr('data-err');
+
     var form = $(this)[0]
     axios.post(form.action, new FormData(form))
       .then(response => {
         console.log(response.data);
         that.find('.submitResult').show();
+        that.find('.submitResult').text(success);
         form.reset();
+      })
+      .catch(error => {
+          that.find('.submitResult').show();
+          that.find('.submitResult').text(err);
       });
   })
 
