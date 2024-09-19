@@ -2,23 +2,27 @@ jQuery(document).ready(function($){
 
 
     //forms
-        $.ajaxSetup({
-            headers: { 'X-CSRF-TOKEN': $('input[name="_token"]').val() }
-        });
-
-  var forms = document.querySelector('.formCta');
-
-  if (forms.length > 0) {
-    var form = forms
-  }
-  window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-  //form = document.getElementById('form');
-
-// On submit...
-  axios.post(form.action, new FormData(form))
-    .then(response => {
-      console.log(response.data)
+    $.ajaxSetup({
+        headers: { 'X-CSRF-TOKEN': $('input[name="_token"]').val() }
     });
+
+
+  window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+
+  $('.formCta').submit(function(e){
+    e.preventDefault();
+    var that = $(this);
+    var form = $(this)[0]
+    axios.post(form.action, new FormData(form))
+      .then(response => {
+        console.log(response.data);
+        that.find('.submitResult').show();
+        form.reset();
+      });
+  })
+
+
 
 
 
