@@ -46,3 +46,52 @@
     </div>
   </div>
 </header>
+
+<div class="menu-responsive" id="menu-responsive" style="display: none">
+  <div class="top">
+    <div class="close-menu">
+      <a href="#"><i class="fal fa-times"></i></a>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="logo-wrap">
+      <a href="/">
+        <img src="{{ options:logo:0:url }}" alt="{{ alt }}">
+      </a>
+    </div>
+    <nav class="mob-menu-wrap">
+      <ul class="mob-menu">
+        {{ nav handle="main" }}
+        <li>
+          <a href="{{ url }}" >{{ title }}
+            {{ if children }}
+            <i class="fa-solid fa-chevron-down"></i>
+            {{ /if }}
+          </a>
+
+          {{ if children }}
+          <ul class="sub-menu">
+            {{ children }}
+            <li>
+
+              <a href="{{ url }}">
+                {{ if bold }} <b> {{ /if }}
+                {{ title }}
+                {{ if bold }} </b> {{ /if }}
+              </a>
+
+            </li>
+            {{ /children }}
+          </ul>
+          {{ /if }}
+
+        </li>
+        {{ /nav }}
+      </ul>
+    </nav>
+    <ul class="btn-list">
+      <li><a href="#" class="link">{{ trans:strings.sign}}</a></li>
+      <li><a href="#" class="btn-border"><span>{{ trans:strings.try}}</span></a></li>
+    </ul>
+  </div>
+</div>
