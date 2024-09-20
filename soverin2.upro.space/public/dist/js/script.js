@@ -124,7 +124,7 @@ jQuery(document).ready(function($){
         $('.dmn').text(domen);
         $('.wrap-domen').attr('data-price', price_domen);
         let $counter = $(this).closest('.input-wrap');
-
+        $('.wrap-domen').find('.total p').text('€ ' + price_domen + ',00');
         updatePrice($counter);
         updateTotalPrice();
     });
