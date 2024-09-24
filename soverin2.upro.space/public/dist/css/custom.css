@@ -50,11 +50,11 @@
   list-style: disc;
 }
 
-.breadcrumb{
+.breadcrumb, .account-list{
   padding-left: 0!important;
 }
 
-.breadcrumb li{
+.breadcrumb li, .account-list li{
   list-style: none!important;
 }
 
