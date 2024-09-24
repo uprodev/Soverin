@@ -20214,7 +20214,7 @@ $(document).ready(function () {
       item.slideUp();
     }
   });
-  
+
   $('.blog .item p').dotdotdot({
     height: 50
   });
