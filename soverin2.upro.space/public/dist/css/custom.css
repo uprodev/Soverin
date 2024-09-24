@@ -42,6 +42,22 @@
   top: auto;
 }
 
+.account ul{
+  padding-left: 25px;
+}
+
+.account ul li{
+  list-style: disc;
+}
+
+.breadcrumb{
+  padding-left: 0!important;
+}
+
+.breadcrumb li{
+  list-style: none!important;
+}
+
 @media (max-width: 991px) {
   .pricing-banner figure img{
     bottom: -97px;
