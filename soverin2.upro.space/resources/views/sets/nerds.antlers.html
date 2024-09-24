@@ -11,7 +11,11 @@
             {{ list }}
               <li>
                 <img src="public/dist/images/icon-5.svg" alt="">
-                {{ item }}
+                {{ if link }}
+                  <a href="{{ link_field:url }}" download>{{ item }}</a>
+                {{ else }}
+                  {{ item }}
+                {{ /if }}
               </li>
             {{ /list }}
           </ul>

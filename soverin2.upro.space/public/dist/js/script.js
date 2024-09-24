@@ -120,7 +120,7 @@ jQuery(document).ready(function($){
     $(document).on('change', '[name="radio_field"]', function(){
         let domen = $(this).val();
         let price_domen = $(this).attr('data-domen');
-
+        $('.form-control.quantity').val(1);
         $('.dmn').text(domen);
         $('.wrap-domen').attr('data-price', price_domen);
         let $counter = $(this).closest('.input-wrap');
@@ -146,6 +146,19 @@ jQuery(document).ready(function($){
         let value = parseInt($quantity.val());
 
         if (value > 0) {
+            $quantity.val(value - 1);
+            $counter.find('.quantity_counts').val(value - 1);
+        }
+
+        updatePrice($counter);
+        updateTotalPrice();
+    });
+    $('.btn-count-minus2').click(function () {
+        let $counter = $(this).closest('.input-wrap');
+        let $quantity = $counter.find('.quantity');
+        let value = parseInt($quantity.val());
+
+        if (value > 1) {
             $quantity.val(value - 1);
             $counter.find('.quantity_counts').val(value - 1);
         }

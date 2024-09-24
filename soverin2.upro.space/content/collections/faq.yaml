@@ -1,4 +1,9 @@
 title: FAQ
+structure:
+  root: true
+  tree:
+    - handle: faq
+order: manual
 sites:
   - default
   - nederlands
