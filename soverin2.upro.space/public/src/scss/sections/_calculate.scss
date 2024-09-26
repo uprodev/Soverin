@@ -1,0 +1,221 @@
+.calculate{
+  padding: 80px 0 142px;
+  position: relative;
+  margin-top: 70px;
+  .bg{
+    top: -40px;
+    border-radius: 24px 24px 0 0;
+    background: $lightBlue;
+  }
+  .content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .text-wrap{
+    width: 500px;
+    padding-top: 5px;
+  }
+  .tabs-css{
+    width: calc(100% - 592px);
+  }
+  .h2{
+    text-align: left;
+    margin-bottom: 26px;
+    color: $colorTitle;
+  }
+  h6{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 120%;
+    margin-bottom: 8px;
+  }
+  p{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 120%;
+    margin-bottom: 8px;
+  }
+  .btn-wrap{
+    margin-top: 32px;
+  }
+  .tabs-menu-form{
+    width: 100%;
+    border: none;
+    grid-gap: 20px 25px;
+    background: transparent;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    li{
+      border-radius: 12px;
+      background: rgb(251, 252, 249);
+      padding: 0!important;
+      font-size: 32px;
+      font-weight: 900;
+      line-height: 60px;
+      height: 60px;
+      color: $blue;
+    }
+    .is-active{
+      background: $blue;
+      color: #fff;
+    }
+  }
+}
+.calculate .calculate-form {
+  width: calc(100% - 592px);
+}
+.calculate .tabs-css{
+  width: 100% !important;
+  max-width: 100%;
+}
+@media (max-width: 1440px) {
+  .calculate .calculate-form {
+    width: calc(100% - 510px);
+  }
+  .calculate .text-wrap{
+    width: 450px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .calculate .tabs-menu-form{
+    grid-gap: 15px;
+  }
+  .calculate .tabs-menu-form li{
+    font-size: 26px;
+    line-height: 50px;
+    height: 50px;
+  }
+  .calculate-form .input-number .btn-count {
+    width: 50px;
+    height: 60px;
+    font-size: 24px;
+  }
+  .calculate-form .input-number input{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+  .calculate-form .text p{
+    font-size: 20px;
+  }
+  .calculate-form .total{
+    padding-right: 0;
+  }
+  .calculate-form .total p{
+    font-size: 22px;
+  }
+  .calculate-form .text-info p{
+    font-size: 20px;
+  }
+  .calculate-form .email-wrap input{
+    height: 70px;
+    line-height: 70px;
+    padding: 0 70px 0 15px;
+  }
+  .calculate-form .email-wrap button{
+    width: 60px;
+    height: 70px;
+  }
+  .calculate-form .total-text p{
+    font-size: 30px;
+    line-height: 70px;
+  }
+}
+@media (max-width:1199px) {
+  .calculate .text-wrap{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .calculate .tabs-css, .calculate .calculate-form{
+    width: 100%;
+  }
+  .calculate .tab-content{
+    width: 100%;
+  }
+}
+
+@media (max-width:991px) {
+  .calculate{
+    padding: 30px 0 50px;
+  }
+
+}
+
+@media (max-width:767px) {
+  .calculate .tabs-menu-form li{
+    width: 30%;
+  }
+  .calculate-form .input-number{
+    width: 160px;
+  }
+  .calculate-form .total{
+    width: 100px;
+  }
+  .calculate-form .text{
+    padding: 0 15px;
+    width: calc(100% - 260px);
+  }
+}
+
+@media (max-width:575px) {
+  .calculate-form .text {
+    padding: 0 0 10px;
+    width: 100%;
+    order: 0;
+  }
+  .calculate-form .input-wrap{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  .calculate-form .input-number{
+    order: 1;
+    margin: 0;
+  }
+  .calculate-form .total{
+    order: 2;
+  }
+  .calculate-form .email-wrap{
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .calculate-form .total-text{
+    width: 100%;
+  }
+
+  .calculate .tabs-menu-form li {
+    font-size: 20px;
+    line-height: 40px;
+    height: 40px;
+  }
+  .calculate-form .input-number input {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+  }
+  .tabs-menu-form{
+    margin-bottom: 30px;
+  }
+  .calculate-form .text p {
+    font-size: 16px;
+    text-align: center;
+  }
+  .calculate-form .text-info{
+    margin: 15px 0;
+  }
+  .calculate-form .text-info p {
+    font-size: 16px;
+  }
+  .calculate-form .text-info p:last-child{
+    min-width: 0;
+  }
+  .calculate-form .total-text p{
+    line-height: 50px;
+  }
+}

@@ -1,0 +1,107 @@
+.pricing-banner{
+  padding: 83px 0 0;
+  position: relative;
+  z-index: 5;
+  .content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .text{
+    width: 57%;
+  }
+  figure{
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    img{
+      position: relative;
+      top: 183px;
+      max-width: inherit;
+      width: 538px;
+    }
+  }
+  .text-up{
+    text-align: left;
+    margin-bottom: 8px;
+  }
+  p{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 120%;
+    letter-spacing: 0.5px;
+    margin-bottom: 24px;
+  }
+  .list-icon{
+    margin-bottom: 48px;
+    li{
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.features-banner{
+  .text{
+    width: 59%;
+  }
+  p{
+    margin-bottom: 48px;
+  }
+  figure{
+    img{
+      top: 120px;
+    }
+  }
+}
+@media (max-width: 1440px) {
+  .pricing-banner figure img{
+    top: 172px;
+  }
+  .features-banner figure img {
+    top: 120px;
+  }
+}
+
+@media (max-width: 1280px) {
+
+}
+@media (max-width:1199px) {
+
+}
+
+@media (max-width:991px) {
+  .pricing-banner figure img{
+    width: 250px;
+    top: 226px;
+  }
+  .pricing-banner .text{
+    width: 90%;
+  }
+  .pricing-banner figure{
+    width: 10%;
+  }
+  .features-banner figure img {
+    top: 172px;
+  }
+}
+
+@media (max-width:767px) {
+  .features-banner figure img {
+    top: 184px;
+  }
+}
+
+@media (max-width:575px) {
+  .pricing-banner figure{
+    width: 100%;
+  }
+  .pricing-banner .text{
+    width: 100%;
+  }
+  .pricing-banner figure img{
+    top: 96px;
+  }
+  .pricing-banner{
+    padding-top: 50px;
+  }
+}

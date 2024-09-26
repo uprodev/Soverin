@@ -1,0 +1,18 @@
+// Customize some defaults
+@import "vars/overrides";
+
+@import "../../plugins/normalize.css";
+@import "../../node_modules/swiper/swiper.scss";
+@import "../../plugins/nice-select/nice-select.css";
+@import "../../plugins/fancybox/jquery.fancybox.min.css";
+@import "../fonts/FA5PRO-master/css/all.css";
+
+
+@import "general/general";
+
+@import "base/base";
+
+@import "components/components";
+
+@import "sections/sections";
+

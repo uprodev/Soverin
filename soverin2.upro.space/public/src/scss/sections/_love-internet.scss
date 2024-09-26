@@ -1,0 +1,104 @@
+.love-internet{
+  padding: 80px 0 0;
+  position: relative;
+  background: $lightBlue;
+  .bg{
+    background: rgb(251, 252, 249);
+    border-radius: 48px 48px 0 0;
+    .bg{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .img{
+      position: absolute;
+      bottom: 0;
+    }
+    .img-1{
+      left: 0;
+    }
+    .img-2{
+      right: 0;
+    }
+  }
+  .content{
+    padding: 42px 14% 102px;
+  }
+  .h2{
+    text-align: center;
+    color: $colorTitle;
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 135%;
+    margin-bottom: 9px;
+  }
+  .text-up{
+    text-align: center;
+    color: $colorTitle;
+    margin-bottom: 22px;
+  }
+  p{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 0 7%;
+  }
+  .content-width{
+    position: relative;
+  }
+  .bg-content{
+    bottom: -17px;
+  }
+}
+@media (max-width: 1440px) {
+  .love-internet .h2{
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 1280px) {
+
+}
+@media (max-width:1199px) {
+  .love-internet .h2 {
+    font-size: 40px;
+  }
+  .love-internet .bg .img{
+    width: 120px;
+    bottom: 50px;
+  }
+  .love-internet{
+    padding-top: 20px;
+  }
+}
+
+@media (max-width:991px) {
+
+}
+
+@media (max-width:767px) {
+  .love-internet .bg .img{
+    width: 90px;
+  }
+}
+
+@media (max-width:575px) {
+  .love-internet .bg .img {
+    width: 30px;
+  }
+  .love-internet .h2 {
+    font-size: 30px;
+  }
+  .love-internet .content {
+    padding: 30px 5%;
+  }
+  .love-internet .bg .img-1{
+    left: 10px;
+  }
+  .love-internet .bg .img-2{
+    right: 10px;
+  }
+}

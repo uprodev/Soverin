@@ -1,0 +1,47 @@
+.bg-red-text{
+  padding: 50px 0 103px;
+  .content{
+    padding: 85px 50px 78px;
+    background: $red;
+    border-radius: 24px;
+    text-align: center;
+  }
+  .h2{
+    margin-bottom: 26px;
+    color: $yellow;
+  }
+  p{
+    color: $yellow;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 120%;
+    letter-spacing: 0.5px;
+  }
+}
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+@media (max-width:1199px) {
+
+}
+
+@media (max-width:991px) {
+
+}
+
+@media (max-width:767px) {
+
+}
+
+@media (max-width:575px) {
+  .bg-red-text .content {
+    padding: 40px 20px 30px;
+  }
+  .bg-red-text{
+    padding: 30px 0 50px;
+  }
+}

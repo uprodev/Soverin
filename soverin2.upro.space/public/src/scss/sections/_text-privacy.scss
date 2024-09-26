@@ -1,0 +1,230 @@
+.text-privacy{
+  padding: 105px 0 80px;
+  .wrap-menu{
+    display: inline-block;
+    float: left;
+    width: 280px;
+    .h3{
+      color: $red;
+      margin-bottom: 16px;
+      font-family: $font;
+      letter-spacing: 2px;
+    }
+    h6{
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 150%;
+      margin-bottom: 15px;
+    }
+  }
+  .text{
+    display: inline-block;
+    width: calc(100% - 361px);
+    float: right;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 150%;
+    letter-spacing: 0.5px;
+    a{
+      text-decoration: underline;
+      &:hover{
+        opacity: 0.7;
+      }
+    }
+    ul{
+      margin: 30px 0;
+      li{
+        margin-bottom: 5px;
+      }
+      ul{
+        padding-left: 20px;
+      }
+    }
+    ol{
+      margin: 30px 0 30px;
+    }
+    p{
+      margin-bottom: 27px;
+    }
+    figure{
+      margin: 50px 0 50px;
+      img{
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+      figcaption{
+        width: 100%;
+        margin-top: 5px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 150%;
+        padding-left: 10px;
+        position: relative;
+        &:before{
+          position: absolute;
+          top: -1px;
+          bottom: -1px;
+          content: '';
+          width: 2px;
+          background: $red;
+          left: 0;
+        }
+      }
+    }
+
+    h3{
+      font-family: $font;
+      letter-spacing: 2px;
+      margin-top: 24px;
+      margin-bottom: 20px;
+    }
+    h2 + ul{
+      margin-top: 0;
+    }
+  }
+  .content{
+    &:after {
+      content: "";
+      display: table;
+      clear: both;}
+  }
+  h2{
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 135%;
+    margin: 25px 0 23px;
+    padding-left: 17px;
+    text-align: left;
+    color: $colorTitle;
+  }
+  h2:first-child{
+    margin-top: 0;
+  }
+  .menu{
+    margin: 0;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    top: -12px;
+    max-height: calc(100vh - 50px);
+    overflow: auto;
+    li{
+      counter-increment: li;
+      position: relative;
+      margin-bottom: 22px;
+      a{
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.2;
+        display: flex;
+        align-items: center;
+        position: relative;
+        letter-spacing: 0.5px;
+        padding: 5px 0 5px 40px;
+        &:before{
+          content: counter(li) ".";
+          position: absolute;
+          top: 4px;
+          text-align: right;
+          left: 0;
+          min-width: 30px;
+        }
+        &:after{
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          width: 100%;
+          transform: scaleX(0);
+          content: '';
+          height: 2px;
+          background: $blue;
+          transform-origin: left;
+          transition: all .4s ease;
+        }
+        &:hover{
+          color: $red;
+          &:after{
+            transform: scaleX(1);
+          }
+        }
+      }
+      .is-current{
+        color: $red;
+        &:after{
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+  b{
+    font-weight: 500;
+  }
+  .list{
+    li{
+      position: relative;
+      &:before{
+        content: '-';
+        margin-right: 5px;
+      }
+    }
+  }
+  .text-center{
+    text-align: center;
+    margin: 50px 0;
+    h2{
+      text-align: center;
+    }
+  }
+}
+
+.text-privacy .menu li a{
+  padding-left: 0;
+  &:before{
+    display: none;
+  }
+}
+@media (max-width: 1440px) {
+  .text-privacy .menu li{
+    margin-bottom: 10px;
+  }
+  .text-privacy .menu li a{
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1280px) {
+
+}
+@media (max-width:1199px) {
+  .text-privacy .menu li a{
+    font-size: 20px;
+  }
+  .text-privacy {
+    padding: 30px 0 50px;
+  }
+}
+
+@media (max-width:991px) {
+  .text-privacy .wrap-menu{
+    display: none;
+  }
+  .text-privacy .text{
+    width: 100%;
+  }
+}
+
+@media (max-width:767px) {
+  .text-privacy h2{
+    font-size: 24px;
+  }
+}
+
+@media (max-width:575px) {
+  .text-privacy .text{
+    font-size: 16px;
+  }
+  .text-privacy h2{
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,146 @@
+.pricing-info{
+  padding: 80px 0 50px;
+  .content{
+    border-radius: 24px;
+    background: rgb(255, 232, 140);
+    padding: 85px 50px 127px;
+    text-align: center;
+  }
+  .h2{
+    margin-bottom: 27px;
+  }
+  p{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 120%;
+    letter-spacing: 0.5px;
+  }
+  .wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 55px;
+    text-align: left;
+  }
+  .item{
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.03),0px 18px 18px 0px rgba(0, 0, 0, 0.03),0px 40px 24px 0px rgba(0, 0, 0, 0.02);
+    background: #fff;
+    width: 240px;
+    height: 190px;
+    padding: 32px 25px;
+    position: relative;
+    p{
+      color: rgb(193, 199, 209);
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 120%;
+    }
+    .small-label{
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      display: inline-block;
+      border-radius: 60px;
+      background: $yellow;
+      line-height: 24px;
+      padding: 0 10px;
+      font-size: 10px;
+      font-weight: 600;
+      color: $red;
+    }
+    h6{
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 16px;
+      color: $red;
+      margin-bottom: -1px;
+
+    }
+    .title{
+      font-size: 70px;
+      font-weight: 600;
+      font-family: $font;
+      line-height: 120%;
+      color: red;
+      sup{
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1;
+        top: -33px;
+      }
+      sub{
+        font-size: 14px;
+        font-weight: 450;
+        line-height: 1;
+        top: -4px;
+        left: -13px;
+      }
+    }
+  }
+  .item-2{
+    background: rgb(255, 92, 77);
+    z-index: 10;
+    h6{
+      color: #fff;
+    }
+    .title{
+      color: #fff;
+    }
+    p{
+      color: #fff;
+    }
+  }
+  .item-1{
+    transform: rotate(-3deg);
+    height: 182px;
+    top: 10px;
+    left: 34px;
+    padding-top: 25px;
+  }
+  .item-3{
+    transform: rotate(3deg);
+    height: 182px;top: 10px;
+    right: 34px;
+    padding-top: 25px;
+    padding-left: 53px;
+  }
+}
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+@media (max-width:1199px) {
+
+}
+
+@media (max-width:991px) {
+  .pricing-info .content{
+    padding: 50px 10px 30px;
+  }
+}
+
+@media (max-width:767px) {
+  .pricing-info .item{
+    width: 100%;
+    transform: none;
+    height: auto;
+  }
+  .pricing-info .wrap{
+    grid-gap: 15px;
+    flex-wrap: wrap;
+  }
+  .pricing-info .item-1, .pricing-info .item-3{
+    top: 0;
+    left: 0;
+    height: auto;
+    padding-left: 25px;
+  }
+}
+
+@media (max-width:575px) {
+
+}

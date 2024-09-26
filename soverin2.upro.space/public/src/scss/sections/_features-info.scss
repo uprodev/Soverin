@@ -1,0 +1,135 @@
+.features-info{
+  margin-top: 70px;
+  padding: 0 0 118px;
+  .content{
+    border-radius: 24px;
+    background: rgb(255, 232, 140);
+    padding: 197px 25px 120px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .item{
+    width: calc(33.33% - 15px);
+    border: 1px solid rgb(0, 191, 230);
+    border-radius: 16px;
+    background: rgb(255, 255, 255);
+    transition: all .4s ease;
+    text-align: center;
+    position: relative;
+    a{
+      display: block;
+      padding: 45px 20px 25px;
+      &:after{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        content: '';
+      }
+    }
+    figure{
+      height: 20px;
+      position: relative;
+      img{
+        position: absolute;
+        bottom: 18px;
+        left: 50%;
+        transform: translate(-50%,0);
+      }
+    }
+    .h3{
+      transition: all .4s ease;
+      color: $red;
+      margin-bottom: 21px;
+    }
+    p{
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 120%;
+      letter-spacing: 0.5px;
+      text-align: center;
+      transition: all .4s ease;
+    }
+    &:hover{
+      background: $blue;
+      h3{
+        color: #fff;
+      }
+      p{
+        color: #fff;
+      }
+    }
+  }
+}
+
+.features-info-bg{
+  position: relative;
+  padding: 80px 0 50px;
+  margin-top: 0!important;
+  .bg{
+    top: -40px;
+    border-radius: 48px 48px 0 0;
+    background: #fff;
+  }
+  .title{
+    width: 100%;
+    margin-bottom: 100px;
+    p{
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 120%;
+      letter-spacing: 0.5px;
+    }
+  }
+  .h2{
+    color: $colorTitle;
+    margin-bottom: 26px;
+  }
+  .content{
+    padding: 85px 20px 100px;
+  }
+}
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+@media (max-width:1199px) {
+
+}
+
+@media (max-width:991px) {
+  .features-info .item{
+    width: calc(50% - 10px);
+  }
+  .features-info .content{
+    grid-gap: 100px 20px;
+    justify-content: center;
+  }
+}
+
+@media (max-width:767px) {
+  .features-info .item{
+    width: 100%;
+  }
+  .features-info-bg .title{
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width:575px) {
+  .features-info .item p{
+    font-size: 20px;
+  }
+  .features-info-bg{
+    padding: 40px 0 40px;
+  }
+  .features-info-bg .content {
+    padding: 50px 20px 40px;
+  }
+}

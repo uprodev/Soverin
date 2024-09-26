@@ -1,0 +1,141 @@
+.home-banner{
+  position: relative;
+  .bg{
+    top: -83px;
+    background: $yellow;
+  }
+  padding: 90px 0 159px;
+  text-align: center;
+  figure{
+    margin-bottom: 53px;
+  }
+  h1{
+    color: $red;
+    font-size: 100px;
+    font-weight: 900;
+    line-height: 100%;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 29px;
+  }
+  .text-up{
+    margin-bottom: 47px;
+  }
+  .scroll{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%,0);
+    a{
+      display: flex;
+      width: fit-content;
+      align-items: center;
+      color: $colorTitle;
+      font-size: 12px;
+      font-weight: 450;
+      line-height: 140%;
+      letter-spacing: 0;
+      text-align: center;
+      text-transform: uppercase;
+      img{
+        margin-right: 18px;
+        transition: all .4s ease;
+        position: relative;
+        top: 0;
+      }
+      &:hover{
+        img{
+          top: 2px;
+        }
+      }
+    }
+  }
+  .content{
+    width: 1100px;
+    max-width: 100%;
+    margin: auto;
+  }
+  .btn-wrap{
+    display: flex;
+    justify-content: center;
+  }
+}
+.bg-section-blue{
+  background: $lightBlue;
+  .bg{
+    background: $lightBlue;
+  }
+}
+.bg-section-white{
+  background: #fff;
+  .bg{
+    background: #fff;
+  }
+  h1{
+    color: $colorTitle;
+  }
+}
+
+.bg-section-blue.home-banner h1{
+  color: $colorTitle;
+}
+.home-banner.pb-245{
+  padding-bottom: 245px;
+  .scroll{
+    bottom: 106px;
+  }
+}
+@media (max-width: 1440px) {
+  .home-banner h1{
+    font-size: 70px;
+  }
+  .home-banner figure{
+    margin-bottom: 30px;
+  }
+  .home-banner .content{
+    width: 900px;
+  }
+  .home-banner{
+    padding: 80px 0  140px;
+    min-height: calc(100vh - 83px);
+  }
+}
+
+@media (max-width: 1280px) {
+
+}
+@media (max-width:1199px) {
+  .home-banner h1 {
+    font-size: 60px;
+  }
+  .home-banner .content{
+    width: 700px;
+  }
+}
+
+@media (max-width:991px) {
+
+}
+
+@media (max-width:767px) {
+
+}
+
+@media (max-width:575px) {
+  .home-banner h1 {
+    font-size: 40px;
+  }
+  .home-banner{
+    height: calc(100vh - 75px);
+    padding-bottom: 50px;
+  }
+  .home-banner.pb-245{
+    padding-bottom: 100px;
+  }
+  .home-banner.pb-245 .scroll{
+    bottom: 120px;
+  }
+  .home-banner .scroll{
+    bottom: 120px;
+  }
+}

@@ -1,0 +1,66 @@
+.customize-email{
+  position: relative;
+  padding: 86px 0 162px;
+  .bg{
+    top: -40px;
+    border-radius: 48px 48px 0 0;
+    background: $lightBlue;
+  }
+  .content{
+    text-align: center;
+    width: 680px;
+    max-width: 100%;
+    margin: auto;
+  }
+  .h2{
+    color: $colorTitle;
+    margin-bottom: 27px;
+  }
+  p{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 120%;
+    letter-spacing: 0.5px;
+  }
+  ul{
+    margin-top: 46px;
+    li{
+      margin-bottom: 20px;
+    }
+    li:last-child{
+      margin-bottom: 0;
+    }
+  }
+  .text-up{
+    margin-bottom: 7px;
+    img{
+      margin-right: 10px;
+      position: relative;
+      top: 2px;
+    }
+  }
+}
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+@media (max-width:1199px) {
+
+}
+
+@media (max-width:991px) {
+
+}
+
+@media (max-width:767px) {
+
+}
+
+@media (max-width:575px) {
+  .customize-email{
+    padding: 50px 0 80px;
+  }
+}

@@ -1,0 +1,149 @@
+.faq{
+  background: $yellow;
+  border-radius: 48px 48px 0px 0px;
+  padding: 61px 0 68px;
+  .title-big{
+    margin-bottom: 22px;
+    color: $colorTitle;
+  }
+}
+.tabs-menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(77, 31, 31);
+  border-radius: 14px;
+  background: rgb(255, 255, 255);
+  width: fit-content;
+  margin: 0 auto 65px;
+  overflow: hidden;
+  li{
+    cursor: pointer;
+    color: $red;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: $font2;
+    padding: 0 16px;
+    height: 58px;
+    line-height: 58px;
+    transition: all .4s ease;
+    &:hover{
+      color: $colorTitle;
+    }
+  }
+  .is-active{
+    color: $colorTitle;
+    background: $lightBlue;
+  }
+}
+.tab-content{
+  width: 800px;
+  max-width: 100%;
+  margin: auto;
+  .tab-item{
+    display: none;
+  }
+  .tab-item:first-child{
+    display: block;
+  }
+}
+.accordion-thumb{
+  cursor: pointer;
+  position: relative;
+  padding-right: 70px;
+  p{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  &:after{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -12px;
+    content: '';
+    background: url("../images/plus.svg")no-repeat center;
+    background-size: contain;
+  }
+}
+.is-active .accordion-thumb{
+  &:after{
+    background: url("../images/minus.svg")no-repeat center;
+    background-size: contain;
+  }
+}
+.accordion-item{
+  margin-bottom: 57px;
+}
+.accordion-panel{
+  display: none;
+  .wrap{
+    padding: 25px 0 0;
+    p{
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 120%;
+      letter-spacing: 0.5px;
+      margin-bottom: 20px;
+      a{
+        text-decoration: underline;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+    p:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+@media (max-width: 1440px) {
+  .tabs-menu li{
+    font-size: 22px;
+  }
+  .accordion-thumb p{
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1280px) {
+
+}
+@media (max-width:1199px) {
+
+}
+
+@media (max-width:991px) {
+  .tabs-menu li {
+    font-size: 18px;
+    padding: 0 12px;
+    height: 50px;
+    line-height: 50px;
+  }
+  .accordion-thumb p {
+    font-size: 18px;
+  }
+  .accordion-item{
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width:767px) {
+  .tabs-menu li{
+    width: 100%;
+    text-align: center;
+  }
+  .tabs-menu{
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width:575px) {
+
+}
